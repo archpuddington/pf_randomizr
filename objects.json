@@ -1,0 +1,4391 @@
+{
+  "traits": [
+    { "trait": {
+      "name":"adorable",
+      "ability_scores": [
+        {"type":"str","value":"1"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"1"},
+        {"type":"wis","value":"3"},
+        {"type":"cha","value":"3"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]
+    }
+  },
+  { "trait": {
+      "name":"aggressive",
+      "ability_scores": [
+        {"type":"str","value":"3"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"3"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"1"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]
+    }
+  },
+  { "trait": {
+      "name":"alcoholic",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"1"},
+        {"type":"con","value":"3"},
+        {"type":"int","value":"1"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]
+    }
+  },
+  { "trait": {
+      "name":"alarming",
+      "ability_scores": [
+        {"type":"str","value":"3"},
+        {"type":"dex","value":"3"},
+        {"type":"con","value":"1"},
+        {"type":"int","value":"3"},
+        {"type":"wis","value":"1"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"3" },
+        { "type":"G","value":"2" }
+      ]
+    }
+  },
+  { "trait": {
+      "name":"ambitious",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"3"},
+        {"type":"wis","value":"3"},
+        {"type":"cha","value":"3"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]
+    }
+  },
+  { "trait": {
+      "name":"arrogant",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"1"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]
+    }
+  },
+  { "trait": {
+      "name":"bearded",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"3"},
+        {"type":"int","value":"3"},
+        {"type":"wis","value":"3"},
+        {"type":"cha","value":"3"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"berzerker",
+      "ability_scores": [
+        {"type":"str","value":"3"},
+        {"type":"dex","value":"3"},
+        {"type":"con","value":"1"},
+        {"type":"int","value":"1"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"3" },
+        { "type":"G","value":"2" }
+      ]
+    }
+  },
+  { "trait": {
+      "name":"big-boned",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"3"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]
+    }
+  },
+  { "trait": {
+      "name":"blank-stare",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"1"},
+        {"type":"wis","value":"1"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"1" },
+        { "type":"G","value":"2" }
+      ]
+    }
+  },
+  { "trait": {
+      "name":"bookworm",
+      "ability_scores": [
+        {"type":"str","value":"1"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"3"},
+        {"type":"wis","value":"3"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"1" },
+        { "type":"G","value":"2" }
+      ]
+    }
+  },
+  { "trait": {
+      "name":"boor",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"1"},
+        {"type":"wis","value":"1"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]
+    }
+  },
+  { "trait": {
+      "name":"brash",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"1"},
+        {"type":"wis","value":"1"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"3" },
+        { "type":"G","value":"2" }
+      ]
+    }
+  },
+  { "trait": {
+      "name":"brave",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"1"},
+        {"type":"cha","value":"3"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"1" }
+      ]
+    }
+  },
+  { "trait": {
+      "name":"brooding",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"3" }
+      ]
+    }
+  },
+  { "trait": {
+      "name":"cadaverous",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"1"},
+        {"type":"con","value":"1"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"3" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"charming",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"3"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"clumsy",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"1"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"3" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"condescending",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"1"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"3" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"cool headed",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"3"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]
+      }    
+    },
+    { "trait": {
+      "name":"cynical",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"3"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"devout",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"3"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"diminutive hands",
+      "ability_scores": [
+        {"type":"str","value":"1"},
+        {"type":"dex","value":"3"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"disturbingly large mouth",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"domineering presence",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"3"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"dour",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"drunk",
+      "ability_scores": [
+        {"type":"str","value":"3"},
+        {"type":"dex","value":"1"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"3" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"dutiful",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"1" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"early riser",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"3"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"1" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"emotional",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"3"}
+      ],
+      "alignment": [
+        { "type":"L","value":"1" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"exhausted",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"1"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"extra digit",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"3"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"1" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"fastidious",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"1" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"feral",
+      "ability_scores": [
+        {"type":"str","value":"3"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"fixed smile",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"folksy",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"1"},
+        {"type":"wis","value":"3"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"generous",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"1" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"gluttonous",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"1"},
+        {"type":"con","value":"3"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"greedy",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"3" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"hairy",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"halitosis",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+    { "trait": {
+      "name":"handsome",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"3"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"hard working",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"3"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"1" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"hollow bones",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"1"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"impulsive",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"3" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"inconsiderate",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"1" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"indecisive",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"1"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"insomniac",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"1"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"3" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"iron stomach",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"3"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"jaunty",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"3"}
+      ],
+      "alignment": [
+        { "type":"L","value":"1" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"know it all",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"3"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"1"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"lazy",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"1"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"learned",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"3"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"a little fat",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"1"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"2" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  },
+  { "trait": {
+      "name":"mad",
+      "ability_scores": [
+        {"type":"str","value":"2"},
+        {"type":"dex","value":"2"},
+        {"type":"con","value":"2"},
+        {"type":"int","value":"2"},
+        {"type":"wis","value":"2"},
+        {"type":"cha","value":"2"}
+      ],
+      "alignment": [
+        { "type":"L","value":"3" },
+        { "type":"G","value":"2" }
+      ]    
+    }
+  
+
+  }
+ ],
+  "classes": [
+  { "class": {
+      "name": "alchemist",
+      "ability_scores": [
+        { "type":"str","value":"1" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"3" },
+        { "type":"wis","value":"2" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"1" },
+        { "type":"dps","value":"2" },
+        { "type":"heal","value":"2" },
+        { "type":"skill","value":"2" },
+        { "type":"companion","value":"1" }
+      ],
+      "range": [
+        { "type":"melee","value":"1" },
+        { "type":"ranged","value":"3" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"1" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"3" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+  { "class": {
+      "name": "arcanist",
+      "ability_scores": [
+        { "type":"str","value":"1" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"3" },
+        { "type":"wis","value":"2" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"1" },
+        { "type":"dps","value":"3" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"1" },
+        { "type":"companion","value":"2" }
+      ],
+      "range": [
+        { "type":"melee","value":"1" },
+        { "type":"ranged","value":"3" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"1" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"3" },
+        { "type":"elemental","value":"3" }
+      ]
+    }
+    },
+  { "class": {
+      "name": "barbarian",
+      "ability_scores": [
+        { "type":"str","value":"3" },
+        { "type":"dex","value":"3" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"1" },
+        { "type":"wis","value":"1" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"2" },
+        { "type":"dps","value":"3" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"1" },
+        { "type":"companion","value":"2" }
+      ],
+      "range": [
+        { "type":"melee","value":"3" },
+        { "type":"ranged","value":"1" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"3" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"2" },
+        { "type":"elemental","value":"1" }
+      ],
+      "l_skills":"4",
+      "c_skills": ["Acrobatics","Climb","Craft","Handle Animal","Intimidate","Knowledge (nature)","Perception","Ride","Survival","Swim"],
+      "bab_type":"full",
+      "mechanics": [
+        { "type":"feature","name":"Fast Movement","level":"1" },
+        { "type":"feature","name":"Rage","level":"1" },
+        { "type":"proficient_w","value":"simple","level":"1" },
+        { "type":"proficient_w","value":"martial","level":"1" },
+        { "type":"proficient_a","value":"light","level":"1" },
+        { "type":"proficient_a","value":"medium","level":"1" },
+        { "type":"proficient_a","value":"shield","level":"1" }                
+      ]
+    }
+    },
+  { "class": {
+      "name": "bard",
+      "ability_scores": [
+        { "type":"str","value":"1" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"3" },
+        { "type":"wis","value":"2" },
+        { "type":"cha","value":"3" }
+      ],
+      "roles": [
+        { "type":"tank","value":"1" },
+        { "type":"dps","value":"2" },
+        { "type":"heal","value":"2" },
+        { "type":"skill","value":"3" },
+        { "type":"companion","value":"2" }
+      ],
+      "range": [
+        { "type":"melee","value":"2" },
+        { "type":"ranged","value":"3" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"1" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"3" },
+        { "type":"elemental","value":"2" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "bloodrager",
+      "ability_scores": [
+        { "type":"str","value":"3" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"3" },
+        { "type":"int","value":"2" },
+        { "type":"wis","value":"2" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"2" },
+        { "type":"dps","value":"3" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"1" },
+        { "type":"companion","value":"2" }
+      ],
+      "range": [
+        { "type":"melee","value":"3" },
+        { "type":"ranged","value":"1" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"3" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"3" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "brawler",
+      "ability_scores": [
+        { "type":"str","value":"3" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"3" },
+        { "type":"wis","value":"2" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"2" },
+        { "type":"dps","value":"2" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"2" },
+        { "type":"companion","value":"1" }
+      ],
+      "range": [
+        { "type":"melee","value":"3" },
+        { "type":"ranged","value":"1" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"3" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"1" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "cavalier",
+      "ability_scores": [
+        { "type":"str","value":"3" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"2" },
+        { "type":"wis","value":"2" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"2" },
+        { "type":"dps","value":"2" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"1" },
+        { "type":"companion","value":"3" }
+      ],
+      "range": [
+        { "type":"melee","value":"3" },
+        { "type":"ranged","value":"1" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"3" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"1" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "cleric",
+      "ability_scores": [
+        { "type":"str","value":"2" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"2" },
+        { "type":"wis","value":"3" },
+        { "type":"cha","value":"3" }
+      ],
+      "roles": [
+        { "type":"tank","value":"2" },
+        { "type":"dps","value":"2" },
+        { "type":"heal","value":"3" },
+        { "type":"skill","value":"2" },
+        { "type":"companion","value":"1" }
+      ],
+      "range": [
+        { "type":"melee","value":"2" },
+        { "type":"ranged","value":"2" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"1" },
+        { "type":"divine","value":"3" },
+        { "type":"arcane","value":"1" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "druid",
+      "ability_scores": [
+        { "type":"str","value":"3" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"2" },
+        { "type":"wis","value":"3" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"3" },
+        { "type":"dps","value":"3" },
+        { "type":"heal","value":"2" },
+        { "type":"skill","value":"2" },
+        { "type":"companion","value":"3" }
+      ],
+      "range": [
+        { "type":"melee","value":"2" },
+        { "type":"ranged","value":"2" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"1" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"3" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "fighter",
+      "ability_scores": [
+        { "type":"str","value":"3" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"2" },
+        { "type":"wis","value":"2" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"3" },
+        { "type":"dps","value":"3" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"2" },
+        { "type":"companion","value":"1" }
+      ],
+      "range": [
+        { "type":"melee","value":"3" },
+        { "type":"ranged","value":"2" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"3" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"1" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "hunter",
+      "ability_scores": [
+        { "type":"str","value":"2" },
+        { "type":"dex","value":"3" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"2" },
+        { "type":"wis","value":"3" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"1" },
+        { "type":"dps","value":"3" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"2" },
+        { "type":"companion","value":"3" }
+      ],
+      "range": [
+        { "type":"melee","value":"2" },
+        { "type":"ranged","value":"2" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"3" },
+        { "type":"divine","value":"2" },
+        { "type":"arcane","value":"1" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "inquisitor",
+      "ability_scores": [
+        { "type":"str","value":"1" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"3" },
+        { "type":"wis","value":"3" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"1" },
+        { "type":"dps","value":"3" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"3" },
+        { "type":"companion","value":"1" }
+      ],
+      "range": [
+        { "type":"melee","value":"1" },
+        { "type":"ranged","value":"3" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"1" },
+        { "type":"divine","value":"3" },
+        { "type":"arcane","value":"1" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "investigator",
+      "ability_scores": [
+        { "type":"str","value":"2" },
+        { "type":"dex","value":"3" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"3" },
+        { "type":"wis","value":"2" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"1" },
+        { "type":"dps","value":"2" },
+        { "type":"heal","value":"2" },
+        { "type":"skill","value":"2" },
+        { "type":"companion","value":"1" }
+      ],
+      "range": [
+        { "type":"melee","value":"2" },
+        { "type":"ranged","value":"2" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"3" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"3" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "monk",
+      "ability_scores": [
+        { "type":"str","value":"3" },
+        { "type":"dex","value":"3" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"2" },
+        { "type":"wis","value":"3" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"3" },
+        { "type":"dps","value":"3" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"2" },
+        { "type":"companion","value":"1" }
+      ],
+      "range": [
+        { "type":"melee","value":"3" },
+        { "type":"ranged","value":"1" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"3" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"1" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "oracle",
+      "ability_scores": [
+        { "type":"str","value":"2" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"2" },
+        { "type":"wis","value":"2" },
+        { "type":"cha","value":"3" }
+      ],
+      "roles": [
+        { "type":"tank","value":"2" },
+        { "type":"dps","value":"2" },
+        { "type":"heal","value":"2" },
+        { "type":"skill","value":"2" },
+        { "type":"companion","value":"1" }
+      ],
+      "range": [
+        { "type":"melee","value":"2" },
+        { "type":"ranged","value":"2" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"2" },
+        { "type":"divine","value":"2" },
+        { "type":"arcane","value":"1" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "paladin",
+      "ability_scores": [
+        { "type":"str","value":"3" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"3" },
+        { "type":"int","value":"2" },
+        { "type":"wis","value":"1" },
+        { "type":"cha","value":"3" }
+      ],
+      "roles": [
+        { "type":"tank","value":"3" },
+        { "type":"dps","value":"2" },
+        { "type":"heal","value":"2" },
+        { "type":"skill","value":"1" },
+        { "type":"companion","value":"1" }
+      ],
+      "range": [
+        { "type":"melee","value":"3" },
+        { "type":"ranged","value":"1" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"1" },
+        { "type":"divine","value":"3" },
+        { "type":"arcane","value":"1" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "ranger",
+      "ability_scores": [
+        { "type":"str","value":"2" },
+        { "type":"dex","value":"3" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"2" },
+        { "type":"wis","value":"2" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"2" },
+        { "type":"dps","value":"3" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"3" },
+        { "type":"companion","value":"3" }
+      ],
+      "range": [
+        { "type":"melee","value":"2" },
+        { "type":"ranged","value":"2" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"3" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"2" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "rogue",
+      "ability_scores": [
+        { "type":"str","value":"2" },
+        { "type":"dex","value":"3" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"3" },
+        { "type":"wis","value":"2" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"1" },
+        { "type":"dps","value":"3" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"3" },
+        { "type":"companion","value":"1" }
+      ],
+      "range": [
+        { "type":"melee","value":"3" },
+        { "type":"ranged","value":"2" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"3" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"1" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "shaman",
+      "ability_scores": [
+        { "type":"str","value":"2" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"2" },
+        { "type":"wis","value":"3" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"2" },
+        { "type":"dps","value":"2" },
+        { "type":"heal","value":"2" },
+        { "type":"skill","value":"2" },
+        { "type":"companion","value":"2" }
+      ],
+      "range": [
+        { "type":"melee","value":"2" },
+        { "type":"ranged","value":"2" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"3" },
+        { "type":"divine","value":"3" },
+        { "type":"arcane","value":"1" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "skald",
+      "ability_scores": [
+        { "type":"str","value":"3" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"2" },
+        { "type":"wis","value":"2" },
+        { "type":"cha","value":"3" }
+      ],
+      "roles": [
+        { "type":"tank","value":"2" },
+        { "type":"dps","value":"2" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"2" },
+        { "type":"companion","value":"1" }
+      ],
+      "range": [
+        { "type":"melee","value":"2" },
+        { "type":"ranged","value":"2" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"3" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"2" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "slayer",
+      "ability_scores": [
+        { "type":"str","value":"2" },
+        { "type":"dex","value":"3" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"2" },
+        { "type":"wis","value":"1" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"2" },
+        { "type":"dps","value":"3" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"2" },
+        { "type":"companion","value":"1" }
+      ],
+      "range": [
+        { "type":"melee","value":"2" },
+        { "type":"ranged","value":"2" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"3" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"1" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "sorceror",
+      "ability_scores": [
+        { "type":"str","value":"1" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"2" },
+        { "type":"wis","value":"2" },
+        { "type":"cha","value":"3" }
+      ],
+      "roles": [
+        { "type":"tank","value":"1" },
+        { "type":"dps","value":"3" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"1" },
+        { "type":"companion","value":"2" }
+      ],
+      "range": [
+        { "type":"melee","value":"1" },
+        { "type":"ranged","value":"3" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"1" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"3" },
+        { "type":"elemental","value":"3" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "summoner",
+      "ability_scores": [
+        { "type":"str","value":"1" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"3" },
+        { "type":"int","value":"2" },
+        { "type":"wis","value":"2" },
+        { "type":"cha","value":"3" }
+      ],
+      "roles": [
+        { "type":"tank","value":"1" },
+        { "type":"dps","value":"2" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"2" },
+        { "type":"companion","value":"3" }
+      ],
+      "range": [
+        { "type":"melee","value":"1" },
+        { "type":"ranged","value":"3" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"1" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"3" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "swashbuckler",
+      "ability_scores": [
+        { "type":"str","value":"2" },
+        { "type":"dex","value":"3" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"2" },
+        { "type":"wis","value":"1" },
+        { "type":"cha","value":"3" }
+      ],
+      "roles": [
+        { "type":"tank","value":"2" },
+        { "type":"dps","value":"2" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"2" },
+        { "type":"companion","value":"2" }
+      ],
+      "range": [
+        { "type":"melee","value":"2" },
+        { "type":"ranged","value":"2" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"3" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"1" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "warpriest",
+      "ability_scores": [
+        { "type":"str","value":"3" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"1" },
+        { "type":"wis","value":"3" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"2" },
+        { "type":"dps","value":"2" },
+        { "type":"heal","value":"2" },
+        { "type":"skill","value":"1" },
+        { "type":"companion","value":"1" }
+      ],
+      "range": [
+        { "type":"melee","value":"3" },
+        { "type":"ranged","value":"1" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"3" },
+        { "type":"divine","value":"2" },
+        { "type":"arcane","value":"1" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "witch",
+      "ability_scores": [
+        { "type":"str","value":"1" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"3" },
+        { "type":"wis","value":"2" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"1" },
+        { "type":"dps","value":"3" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"1" },
+        { "type":"companion","value":"2" }
+      ],
+      "range": [
+        { "type":"melee","value":"1" },
+        { "type":"ranged","value":"3" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"1" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"3" },
+        { "type":"elemental","value":"1" }
+      ]
+    }
+    },
+    { "class": {
+      "name": "wizard",
+      "ability_scores": [
+        { "type":"str","value":"1" },
+        { "type":"dex","value":"2" },
+        { "type":"con","value":"2" },
+        { "type":"int","value":"3" },
+        { "type":"wis","value":"2" },
+        { "type":"cha","value":"2" }
+      ],
+      "roles": [
+        { "type":"tank","value":"1" },
+        { "type":"dps","value":"3" },
+        { "type":"heal","value":"1" },
+        { "type":"skill","value":"1" },
+        { "type":"companion","value":"2" }
+      ],
+      "range": [
+        { "type":"melee","value":"1" },
+        { "type":"ranged","value":"3" }
+      ],
+      "magic": [
+        { "type":"mundane","value":"1" },
+        { "type":"divine","value":"1" },
+        { "type":"arcane","value":"3" },
+        { "type":"elemental","value":"3" }
+      ]
+    }
+   }
+ ],
+  "races": [
+  { "race": {
+   "name":"aasimar",
+   "ability_scores": [
+     { "type":"str","value":"2" },
+     { "type":"dex","value":"2" },
+     { "type":"con","value":"2" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"3" },
+     { "type":"cha","value":"3" }
+   ],
+   "alignment": [
+     { "type":"G","value":"1" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"catfolk",
+   "ability_scores": [
+     { "type":"str","value":"2" },
+     { "type":"dex","value":"3" },
+     { "type":"con","value":"2" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"1" },
+     { "type":"cha","value":"3" }
+   ],
+   "alignment": [
+     { "type":"L","value":"3" },
+     { "type":"G","value":"1" }
+   ]
+   }
+  },
+ { "race": {
+   "name":"dwarf",
+   "ability_scores": [
+     { "type":"str","value":"2" },
+     { "type":"dex","value":"2" },
+     { "type":"con","value":"3" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"3" },
+     { "type":"cha","value":"1" }
+   ],
+   "alignment": [
+     { "type":"L","value":"1" },
+     { "type":"G","value":"1" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"dhampir",
+   "ability_scores": [
+     { "type":"str","value":"2" },
+     { "type":"dex","value":"3" },
+     { "type":"con","value":"1" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"2" },
+     { "type":"cha","value":"3" }
+   ],
+   "alignment": [
+     { "type":"L","value":"2" },
+     { "type":"G","value":"3" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"drow",
+   "ability_scores": [
+     { "type":"str","value":"2" },
+     { "type":"dex","value":"3" },
+     { "type":"con","value":"1" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"2" },
+     { "type":"cha","value":"3" }
+   ],
+   "alignment": [
+     { "type":"L","value":"3" },
+     { "type":"G","value":"3" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"elf",
+   "ability_scores": [
+     { "type":"str","value":"2" },
+     { "type":"dex","value":"3" },
+     { "type":"con","value":"1" },
+     { "type":"int","value":"3" },
+     { "type":"wis","value":"2" },
+     { "type":"cha","value":"2" }
+   ],
+   "alignment": [
+     { "type":"L","value":"3" },
+     { "type":"G","value":"1" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"fetchling",
+   "ability_scores": [
+     { "type":"str","value":"2" },
+     { "type":"dex","value":"3" },
+     { "type":"con","value":"2" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"1" },
+     { "type":"cha","value":"3" }
+   ],
+   "alignment": [
+     { "type":"L","value":"2" },
+     { "type":"G","value":"2" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"gnome",
+   "ability_scores": [
+     { "type":"str","value":"1" },
+     { "type":"dex","value":"2" },
+     { "type":"con","value":"3" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"2" },
+     { "type":"cha","value":"3" }
+   ],
+   "alignment": [
+     { "type":"L","value":"3" },
+     { "type":"G","value":"2" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"half-elf",
+   "ability_scores": [
+     { "type":"str","value":"2" },
+     { "type":"dex","value":"2" },
+     { "type":"con","value":"2" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"2" },
+     { "type":"cha","value":"2" }
+   ],
+   "alignment": [
+     { "type":"L","value":"3" },
+     { "type":"G","value":"1" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"half-orc",
+   "ability_scores": [
+     { "type":"str","value":"3" },
+     { "type":"dex","value":"2" },
+     { "type":"con","value":"2" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"2" },
+     { "type":"cha","value":"2" }
+   ],
+   "alignment": [
+     { "type":"L","value":"3" },
+     { "type":"G","value":"2" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"halfling",
+   "ability_scores": [
+     { "type":"str","value":"1" },
+     { "type":"dex","value":"3" },
+     { "type":"con","value":"2" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"2" },
+     { "type":"cha","value":"3" }
+   ],
+   "alignment": [
+     { "type":"L","value":"2" },
+     { "type":"G","value":"2" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"hobgoblin",
+   "ability_scores": [
+     { "type":"str","value":"2" },
+     { "type":"dex","value":"3" },
+     { "type":"con","value":"3" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"2" },
+     { "type":"cha","value":"2" }
+   ],
+   "alignment": [
+     { "type":"L","value":"1" },
+     { "type":"G","value":"3" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"human",
+   "ability_scores": [
+     { "type":"str","value":"2" },
+     { "type":"dex","value":"2" },
+     { "type":"con","value":"2" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"2" },
+     { "type":"cha","value":"2" }
+   ],
+   "alignment": [
+     { "type":"L","value":"2" },
+     { "type":"G","value":"2" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"ifrit",
+   "ability_scores": [
+     { "type":"str","value":"2" },
+     { "type":"dex","value":"3" },
+     { "type":"con","value":"2" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"1" },
+     { "type":"cha","value":"3" }
+   ],
+   "alignment": [
+     { "type":"L","value":"1" },
+     { "type":"G","value":"2" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"oread",
+   "ability_scores": [
+     { "type":"str","value":"3" },
+     { "type":"dex","value":"2" },
+     { "type":"con","value":"2" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"3" },
+     { "type":"cha","value":"2" }
+   ],
+   "alignment": [
+     { "type":"L","value":"1" },
+     { "type":"G","value":"2" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"ratfolk",
+   "ability_scores": [
+     { "type":"str","value":"1" },
+     { "type":"dex","value":"3" },
+     { "type":"con","value":"2" },
+     { "type":"int","value":"3" },
+     { "type":"wis","value":"2" },
+     { "type":"cha","value":"2" }
+   ],
+   "alignment": [
+     { "type":"L","value":"2" },
+     { "type":"G","value":"2" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"sylph",
+   "ability_scores": [
+     { "type":"str","value":"2" },
+     { "type":"dex","value":"3" },
+     { "type":"con","value":"1" },
+     { "type":"int","value":"3" },
+     { "type":"wis","value":"2" },
+     { "type":"cha","value":"3" }
+   ],
+   "alignment": [
+     { "type":"L","value":"2" },
+     { "type":"G","value":"2" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"tengu",
+   "ability_scores": [
+     { "type":"str","value":"2" },
+     { "type":"dex","value":"3" },
+     { "type":"con","value":"1" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"3" },
+     { "type":"cha","value":"2" }
+   ],
+   "alignment": [
+     { "type":"L","value":"3" },
+     { "type":"G","value":"2" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"tiefling",
+   "ability_scores": [
+     { "type":"str","value":"2" },
+     { "type":"dex","value":"3" },
+     { "type":"con","value":"1" },
+     { "type":"int","value":"3" },
+     { "type":"wis","value":"2" },
+     { "type":"cha","value":"3" }
+   ],
+   "alignment": [
+     { "type":"L","value":"2" },
+     { "type":"G","value":"2" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"undine",
+   "ability_scores": [
+     { "type":"str","value":"1" },
+     { "type":"dex","value":"3" },
+     { "type":"con","value":"2" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"3" },
+     { "type":"cha","value":"2" }
+   ],
+   "alignment": [
+     { "type":"L","value":"2" },
+     { "type":"G","value":"2" }
+   ]
+   }
+  }
+ ],
+  "spells": [
+  { "spell": {
+  "name":"Resistance",
+  "class_list": ["sorceror","wizard"],
+  "school":"Abjuration",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Acid Splash",
+  "class_list": ["sorceror","wizard"],
+  "school":"Conjuration",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Detect Magic",
+  "class_list": ["sorceror","wizard"],
+  "school":"Divination",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Detect Poison",
+  "class_list": ["sorceror","wizard"],
+  "school":"Divination",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Read Magic",
+  "class_list": ["sorceror","wizard"],
+  "school":"Divination",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Daze",
+  "class_list": ["sorceror","wizard"],
+  "school":"Enchantment",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Dancing Lights",
+  "class_list": ["sorceror","wizard"],
+  "school":"Evocation",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Flare",
+  "class_list": ["sorceror","wizard"],
+  "school":"Evocation",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Light",
+  "class_list": ["sorceror","wizard"],
+  "school":"Evocation",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Ray of Frost",
+  "class_list": ["sorceror","wizard"],
+  "school":"Evocation",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Ghost Sound",
+  "class_list": ["sorceror","wizard"],
+  "school":"Illusion",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Bleed",
+  "class_list": ["sorceror","wizard"],
+  "school":"Necromancy",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Disrupt Undead",
+  "class_list": ["sorceror","wizard"],
+  "school":"Necromancy",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Touch of Fatigue",
+  "class_list": ["sorceror","wizard"],
+  "school":"Necromancy",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Mage Hand",
+  "class_list": ["sorceror","wizard"],
+  "school":"Transmutation",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Mending",
+  "class_list": ["sorceror","wizard"],
+  "school":"Transmutation",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Message",
+  "class_list": ["sorceror","wizard"],
+  "school":"Transmutation",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Open/Close",
+  "class_list": ["sorceror","wizard"],
+  "school":"Transmutation",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Arcane Mark",
+  "class_list": ["sorceror","wizard"],
+  "school":"Universal",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Prestidigitation",
+  "class_list": ["sorceror","wizard"],
+  "school":"Universal",
+  "level":"0"
+  }
+},
+{ "spell": {
+  "name":"Alarm",
+  "class_list": ["sorceror","wizard"],
+  "school":"Abjuration",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Endure Elements",
+  "class_list": ["sorceror","wizard"],
+  "school":"Abjuration",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Hold Portal",
+  "class_list": ["sorceror","wizard"],
+  "school":"Abjuration",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Protection from Chaos",
+  "class_list": ["sorceror","wizard"],
+  "school":"Abjuration",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Protection from Evil",
+  "class_list": ["sorceror","wizard"],
+  "school":"Abjuration",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Protection from Good",
+  "class_list": ["sorceror","wizard"],
+  "school":"Abjuration",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Protection from Law",
+  "class_list": ["sorceror","wizard"],
+  "school":"Abjuration",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Shield",
+  "class_list": ["sorceror","wizard"],
+  "school":"Abjuration",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Grease",
+  "class_list": ["sorceror","wizard"],
+  "school":"Conjuration",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Mage Armor",
+  "class_list": ["sorceror","wizard"],
+  "school":"Conjuration",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Mount",
+  "class_list": ["sorceror","wizard"],
+  "school":"Conjuration",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Obscuring Mist",
+  "class_list": ["sorceror","wizard"],
+  "school":"Conjuration",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Summon Monster I",
+  "class_list": ["sorceror","wizard"],
+  "school":"Conjuration",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Unseen Servant",
+  "class_list": ["sorceror","wizard"],
+  "school":"Conjuration",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Comprehend Languages",
+  "class_list": ["sorceror","wizard"],
+  "school":"Divination",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Detect Secret Doors",
+  "class_list": ["sorceror","wizard"],
+  "school":"Divination",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Detect Undead",
+  "class_list": ["sorceror","wizard"],
+  "school":"Divination",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Identify",
+  "class_list": ["sorceror","wizard"],
+  "school":"Divination",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"True Strike",
+  "class_list": ["sorceror","wizard"],
+  "school":"Divination",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Charm Person",
+  "class_list": ["sorceror","wizard"],
+  "school":"Enchantment",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Hypnotism",
+  "class_list": ["sorceror","wizard"],
+  "school":"Enchantment",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Sleep",
+  "class_list": ["sorceror","wizard"],
+  "school":"Enchantment",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Burning Hands",
+  "class_list": ["sorceror","wizard"],
+  "school":"Evocation",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Floating Disk",
+  "class_list": ["sorceror","wizard"],
+  "school":"Evocation",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Magic Missile",
+  "class_list": ["sorceror","wizard"],
+  "school":"Evocation",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Shocking Grasp",
+  "class_list": ["sorceror","wizard"],
+  "school":"Evocation",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Color Spray",
+  "class_list": ["sorceror","wizard"],
+  "school":"Illusion",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Disguise Self",
+  "class_list": ["sorceror","wizard"],
+  "school":"Illusion",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Magic Aura",
+  "class_list": ["sorceror","wizard"],
+  "school":"Illusion",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Silent Image",
+  "class_list": ["sorceror","wizard"],
+  "school":"Illusion",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Ventriloquism",
+  "class_list": ["sorceror","wizard"],
+  "school":"Illusion",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Cause Fear",
+  "class_list": ["sorceror","wizard"],
+  "school":"Necromancy",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Chill Touch",
+  "class_list": ["sorceror","wizard"],
+  "school":"Necromancy",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Ray of Enfeeblement",
+  "class_list": ["sorceror","wizard"],
+  "school":"Necromancy",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Animate Rope",
+  "class_list": ["sorceror","wizard"],
+  "school":"Transmutation",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Enlarge Person",
+  "class_list": ["sorceror","wizard"],
+  "school":"Transmutation",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Erase",
+  "class_list": ["sorceror","wizard"],
+  "school":"Transmutation",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Expeditious Retreat",
+  "class_list": ["sorceror","wizard"],
+  "school":"Transmutation",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Feather Fall",
+  "class_list": ["sorceror","wizard"],
+  "school":"Transmutation",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Jump",
+  "class_list": ["sorceror","wizard"],
+  "school":"Transmutation",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Magic Weapon",
+  "class_list": ["sorceror","wizard"],
+  "school":"Transmutation",
+  "level":"1"
+  }
+},
+{ "spell": {
+  "name":"Reduce Person",
+  "class_list": ["sorceror","wizard"],
+  "school":"Transmutation",
+  "level":"1"
+  }
+}
+  ],
+  "feats": [
+
+{ "feat": {
+  "name":"Acrobatic",
+  "descriptor": {
+    "roles": [
+       { "type":"tank","value":"2" },
+       { "type":"dps","value":"2" },
+       { "type":"heal","value":"2" },
+       { "type":"skill","value":"3" },
+       { "type":"companion","value":"2" },
+       { "type":"control", "value":"2" }
+   ],
+   "range": [
+     { "type":"melee","value":"2" },
+     { "type":"ranged","value":"2" }
+   ],
+   "magic": [
+     { "type":"mundane","value":"3" },
+     { "type":"divine","value":"1" },
+     { "type":"arcane","value":"1" },
+     { "type":"elemental","value":"1" }
+   ]
+  },
+  "prereq": [],
+  "result": [
+    { "type":"text","value":"+2 bonus on Acrobatics and Fly checks" },
+    { "type":"stat_inc","stat":"acrobatics","value":"2" },
+    { "type":"stat_inc","stat":"fly","value":"2" }
+  ]
+}
+},
+{ "feat": {
+  "name":"Agile Maneuvers",
+  "descriptor": {
+    "roles": [
+       { "type":"tank","value":"1" },
+       { "type":"dps","value":"2" },
+       { "type":"heal","value":"1" },
+       { "type":"skill","value":"2" },
+       { "type":"companion","value":"1" },
+       { "type":"control", "value":"3" }
+   ],
+   "range": [
+     { "type":"melee","value":"3" },
+     { "type":"ranged","value":"1" }
+   ],
+   "magic": [
+     { "type":"mundane","value":"3" },
+     { "type":"divine","value":"1" },
+     { "type":"arcane","value":"1" },
+     { "type":"elemental","value":"1" }
+   ]
+  },
+  "prereq": [],
+  "result": [
+    { "type":"text","value":"Use your Dex bonus when calculating your CMB" },
+    { "type":"stat_replace","stat_a":"dex","stat_b":"str","context":"cmb" }
+  ]
+}
+},
+{ "feat": {
+  "name":"Alertness",
+  "descriptor": {
+    "roles": [
+       { "type":"tank","value":"2" },
+       { "type":"dps","value":"2" },
+       { "type":"heal","value":"2" },
+       { "type":"skill","value":"3" },
+       { "type":"companion","value":"2" },
+       { "type":"control", "value":"2" }
+   ],
+   "range": [
+     { "type":"melee","value":"2" },
+     { "type":"ranged","value":"2" }
+   ],
+   "magic": [
+     { "type":"mundane","value":"3" },
+     { "type":"divine","value":"1" },
+     { "type":"arcane","value":"1" },
+     { "type":"elemental","value":"1" }
+   ]
+  },
+  "prereq": [],
+  "result": [
+    { "type":"text","value":"+2 bonus on Perception and Sense Motive checks" },
+    { "type":"stat_inc","stat":"perception","value":"2" },
+    { "type":"stat_inc","stat":"sense_motive","value":"2" }
+  ]
+}
+},
+{ "feat": {
+  "name":"Alignment Channel",
+  "descriptor": {
+    "roles": [
+       { "type":"tank","value":"1" },
+       { "type":"dps","value":"2" },
+       { "type":"heal","value":"3" },
+       { "type":"skill","value":"2" },
+       { "type":"companion","value":"1" },
+       { "type":"control", "value":"2" }
+   ],
+   "range": [
+     { "type":"melee","value":"2" },
+     { "type":"ranged","value":"2" }
+   ],
+   "magic": [
+     { "type":"mundane","value":"1" },
+     { "type":"divine","value":"3" },
+     { "type":"arcane","value":"1" },
+     { "type":"elemental","value":"1" }
+   ]
+  },
+  "prereq": [
+    { "type":"feature","value":"channel" }
+  ],
+  "result": [
+    { "text":"Channel energy can heal or harm outsiders" }
+  ]
+}
+},
+{ "feat": {
+  "name":"Animal Affinity",
+  "descriptor": {
+    "roles": [
+       { "type":"tank","value":"2" },
+       { "type":"dps","value":"2" },
+       { "type":"heal","value":"2" },
+       { "type":"skill","value":"3" },
+       { "type":"companion","value":"3" },
+       { "type":"control", "value":"2" }
+   ],
+   "range": [
+     { "type":"melee","value":"2" },
+     { "type":"ranged","value":"2" }
+   ],
+   "magic": [
+     { "type":"mundane","value":"3" },
+     { "type":"divine","value":"1" },
+     { "type":"arcane","value":"1" },
+     { "type":"elemental","value":"1" }
+   ]
+  },
+  "prereq": [],
+  "result": [
+    { "type":"text","value":"+2 bonus on Handle Animal and Ride checks" },
+    { "type":"stat_inc","stat":"handle_animal","value":"2" },
+    { "type":"stat_inc","stat":"ride","value":"2" }
+  ]
+}
+},
+{ "feat": {
+  "name":"Arcane Armor Training",
+  "descriptor": {
+    "roles": [
+       { "type":"tank","value":"2" },
+       { "type":"dps","value":"3" },
+       { "type":"heal","value":"1" },
+       { "type":"skill","value":"2" },
+       { "type":"companion","value":"2" },
+       { "type":"control", "value":"2" }
+   ],
+   "range": [
+     { "type":"melee","value":"2" },
+     { "type":"ranged","value":"3" }
+   ],
+   "magic": [
+     { "type":"mundane","value":"1" },
+     { "type":"divine","value":"1" },
+     { "type":"arcane","value":"3" },
+     { "type":"elemental","value":"3" }
+   ]
+  },
+  "prereq": [
+    { "type":"proficiency","value":"armor_light" },
+    { "type":"caster_level","value":"3" }
+  ],
+  "result": [
+    { "type":"text","value":"Reduce your arcane spell failure chance by 10%" },
+    { "type":"stat_red","stat":"spell_fail","value":"10" }
+  ]
+}
+},
+{ "feat": {
+  "name":"Arcane Armor Mastery",
+  "descriptor": {
+    "roles": [
+       { "type":"tank","value":"2" },
+       { "type":"dps","value":"3" },
+       { "type":"heal","value":"1" },
+       { "type":"skill","value":"2" },
+       { "type":"companion","value":"2" },
+       { "type":"control", "value":"2" }
+   ],
+   "range": [
+     { "type":"melee","value":"2" },
+     { "type":"ranged","value":"3" }
+   ],
+   "magic": [
+     { "type":"mundane","value":"1" },
+     { "type":"divine","value":"1" },
+     { "type":"arcane","value":"3" },
+     { "type":"elemental","value":"3" }
+   ]
+  },
+  "prereq": [
+    { "type":"proficiency","value":"armor_light" },
+    { "type":"proficiency","value":"armor_medium" },
+    { "type":"feat","value":"Arcane Armor Training" },
+    { "type":"caster_level","value":"7" }
+  ],
+  "result": [
+    { "type":"text","value":"Reduce your arcane spell failure chance by 20%" },
+    { "type":"stat_red","stat":"spell_fail","value":"20" }
+  ]
+}
+},
+{ "feat": {
+  "name":"Arcane Strike",
+  "descriptor": {
+    "roles": [
+       { "type":"tank","value":"2" },
+       { "type":"dps","value":"3" },
+       { "type":"heal","value":"1" },
+       { "type":"skill","value":"2" },
+       { "type":"companion","value":"2" },
+       { "type":"control", "value":"2" }
+   ],
+   "range": [
+     { "type":"melee","value":"2" },
+     { "type":"ranged","value":"2" }
+   ],
+   "magic": [
+     { "type":"mundane","value":"1" },
+     { "type":"divine","value":"1" },
+     { "type":"arcane","value":"3" },
+     { "type":"elemental","value":"3" }
+   ]
+  },
+  "prereq": [
+    { "type":"feature","value":"arcane" }
+  ],
+  "result": [
+    { "type":"text","value":"+1 damage and weapons are considered magic" },
+    { "type":"stat_inc","stat":"damage","value":"1" },
+    { "type":"attack_type","value":"magic" }
+  ]
+}
+},
+{ "feat": {
+  "name":"Armor Proficiency, Light",
+  "descriptor": {
+    "roles": [
+       { "type":"tank","value":"2" },
+       { "type":"dps","value":"2" },
+       { "type":"heal","value":"2" },
+       { "type":"skill","value":"2" },
+       { "type":"companion","value":"2" },
+       { "type":"control", "value":"2" }
+   ],
+   "range": [
+     { "type":"melee","value":"2" },
+     { "type":"ranged","value":"2" }
+   ],
+   "magic": [
+     { "type":"mundane","value":"3" },
+     { "type":"divine","value":"1" },
+     { "type":"arcane","value":"1" },
+     { "type":"elemental","value":"1" }
+   ]
+  },
+  "prereq": [],
+  "result": [
+    { "type":"text","value":"No penalties on attack rolls while wearing light armor" },
+    { "type":"armor_prof","value":"light" }
+  ]
+}
+},
+{ "feat": {
+  "name":"Armor Proficiency, Medium",
+  "descriptor": {
+    "roles": [
+       { "type":"tank","value":"3" },
+       { "type":"dps","value":"2" },
+       { "type":"heal","value":"2" },
+       { "type":"skill","value":"2" },
+       { "type":"companion","value":"2" },
+       { "type":"control", "value":"2" }
+   ],
+   "range": [
+     { "type":"melee","value":"3" },
+     { "type":"ranged","value":"2" }
+   ],
+   "magic": [
+     { "type":"mundane","value":"3" },
+     { "type":"divine","value":"1" },
+     { "type":"arcane","value":"1" },
+     { "type":"elemental","value":"1" }
+   ]
+  },
+  "prereq": [
+    { "type":"armor_prof","value":"light" }
+  ],
+  "result": [
+    { "type":"text","value":"No penalties on attack rolls while wearing medium armor" },
+    { "type":"armor_prof","value":"medium" }
+  ]
+}
+},
+{ "feat": {
+  "name":"Armor Proficiency, Heavy",
+  "descriptor": {
+    "roles": [
+       { "type":"tank","value":"3" },
+       { "type":"dps","value":"1" },
+       { "type":"heal","value":"2" },
+       { "type":"skill","value":"1" },
+       { "type":"companion","value":"2" },
+       { "type":"control", "value":"2" }
+   ],
+   "range": [
+     { "type":"melee","value":"3" },
+     { "type":"ranged","value":"1" }
+   ],
+   "magic": [
+     { "type":"mundane","value":"3" },
+     { "type":"divine","value":"1" },
+     { "type":"arcane","value":"1" },
+     { "type":"elemental","value":"1" }
+   ]
+  },
+  "prereq": [
+    { "type":"armor_prof","value":"light" },
+    { "type":"armor_prof","value":"medium" }
+  ],
+  "result": [
+    { "type":"text","value":"No penalties on attack rolls while wearing heavy armor" },
+    { "type":"armor_prof","value":"heavy" }
+  ]
+}
+},
+{ "feat": {
+  "name":"Athletic",
+  "descriptor": {
+    "roles": [
+       { "type":"tank","value":"2" },
+       { "type":"dps","value":"2" },
+       { "type":"heal","value":"2" },
+       { "type":"skill","value":"3" },
+       { "type":"companion","value":"2" },
+       { "type":"control", "value":"2" }
+   ],
+   "range": [
+     { "type":"melee","value":"2" },
+     { "type":"ranged","value":"2" }
+   ],
+   "magic": [
+     { "type":"mundane","value":"3" },
+     { "type":"divine","value":"1" },
+     { "type":"arcane","value":"1" },
+     { "type":"elemental","value":"1" }
+   ]
+  },
+  "prereq": [],
+  "result": [
+    { "type":"text","value":"+2 bonus on Climb and Swim checks" },
+    { "type":"stat_inc","stat":"climb","value":"2" },
+    { "type":"stat_inc","stat":"swim","value":"2" }
+  ]
+}
+}
+],
+  "domains": [
+  { "domain": {
+    "name":"air",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"1" }
+    ],
+    "range": [
+      { "type":"melee","value":"1" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"3" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"animal",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"1" }
+    ],
+    "range": [
+      { "type":"melee","value":"1" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"3" }
+    ],
+    "result": [
+      { "type":"class_skill","value":"k:nature" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"artifice",
+    "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"3" },
+      { "type":"companion","value":"1" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"1" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"chaos",
+    "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"1" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"charm",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"1" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"3" },
+      { "type":"companion","value":"1" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"community",
+    "ability_scores": [
+      { "type":"str","value":"1" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"1" },
+      { "type":"heal","value":"3" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"1" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"1" }
+    ],
+    "prereq": [
+      { "type":"alignment","value":"C" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"darkness",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"1" }
+    ],
+    "range": [
+      { "type":"melee","value":"1" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"3" }
+    ],
+    "result": [
+      { "type":"bonus_feat","value":"blind-fight" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"destruction",
+    "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"1" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"1" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"earth",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"3" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"1" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"3" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"evil",
+    "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"1" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"1" }
+    ],
+    "prereq": [
+      { "type":"alignment","value":"E" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"fire",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"3" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"1" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"3" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"glory",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"3" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"good",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"3" },
+      { "type":"skill","value":"3" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"1" }
+    ],
+    "prereq": [
+      { "type":"alignment","value":"G" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"healing",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"3" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"1" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"knowledge",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"1" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"3" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"1" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"1" }
+    ],
+    "result": [
+      { "type":"class_skill","value":"k:arcana" },
+      { "type":"class_skill","value":"k:dungeoneering" },
+      { "type":"class_skill","value":"k:engineering" },
+      { "type":"class_skill","value":"k:geogaphy" },
+      { "type":"class_skill","value":"k:history" },
+      { "type":"class_skill","value":"k:local" },
+      { "type":"class_skill","value":"k:nature" },
+      { "type":"class_skill","value":"k:nobility" },
+      { "type":"class_skill","value":"k:planes" },
+      { "type":"class_skill","value":"k:religion" }
+    ],
+    "prereq": [
+      { "type":"alignment","value":"L" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"liberation",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"1" },
+      { "type":"heal","value":"3" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"luck",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"1" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"3" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"madness",
+    "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"3" },
+      { "type":"companion","value":"1" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"magic",
+    "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+{ "domain": {
+    "name":"nobility",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"3" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"plant",
+    "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"3" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"1" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"protection",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"3" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ],
+    "result": [
+      { "type":"stat_inc","stat":"resist","value":"1","iterate":"5" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"repose",
+    "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"3" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"rune",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ],
+    "result": [
+      { "type":"bonus_feat","value":"Scribe Scroll" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"strength",
+    "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"1" },
+      { "type":"skill","value":"3" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"sun",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"travel",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"1" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"3" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"1" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"trickery",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"war",
+    "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"water",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  },
+  { "domain": {
+    "name":"weather",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"3" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"3" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"1" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"3" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+  }
+  }
+  ],
+  "schools": [
+  { "school": {
+    "name":"abjuration",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"3" },
+      { "type":"int","value":"3" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"3" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+  } 
+  },
+  { "school": {
+    "name":"air",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"3" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"3" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"3" }
+    ]
+  } 
+  },
+  { "school": {
+    "name":"conjuration",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"3" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"3" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+    } 
+  },
+  { "school": {
+    "name":"divination",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"3" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"3" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+    } 
+  },
+  { "school": {
+    "name":"earth",
+    "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"3" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"3" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"3" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"3" }
+    ]
+  } 
+  },
+  { "school": {
+    "name":"enchantment",
+    "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"3" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"3" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"3" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+    } 
+  },
+  { "school": {
+    "name":"evocation",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"3" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+    } 
+  },
+  { "school": {
+    "name":"fire",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"3" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"3" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"3" }
+    ]
+  } 
+  },
+  { "school": {
+    "name":"illusion",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"3" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"3" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+    } 
+  },
+  { "school": {
+    "name":"necromancy",
+    "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"3" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"3" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"2" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+    } 
+  },
+  { "school": {
+    "name":"transmutation",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"3" },
+      { "type":"con","value":"3" },
+      { "type":"int","value":"3" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+    } 
+  },
+  { "school": {
+    "name":"universalist",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"3" },
+      { "type":"con","value":"3" },
+      { "type":"int","value":"3" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ] 
+  }
+  },
+  { "school": {
+    "name":"water",
+    "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"3" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"2" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"3" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"2" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"3" }
+    ]
+  } 
+  }
+  ],
+  "bloodlines": [
+    { "bloodline": {
+      "name":"Aberrant",
+      "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"3" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"1" },
+      { "type":"skill","value":"1" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"1" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+    }
+    },
+    { "bloodline": {
+      "name":"Abyssal",
+      "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"3" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"1" },
+      { "type":"skill","value":"1" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"1" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+    }
+    },
+    { "bloodline": {
+      "name":"Celestial",
+      "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"3" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"3" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"1" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+    }
+    },
+    { "bloodline": {
+      "name":"Destined",
+      "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"3" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"3" }
+    ],
+    "roles": [
+      { "type":"tank","value":"3" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"1" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"3" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"1" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+    }
+    },
+    { "bloodline": {
+      "name":"Draconic",
+      "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"3" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"1" },
+      { "type":"skill","value":"1" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"1" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+    }
+    },
+    { "bloodline": {
+      "name":"Elemental",
+      "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"3" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"3" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"3" },
+      { "type":"heal","value":"1" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"1" }
+    ],
+    "range": [
+      { "type":"melee","value":"1" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+    }
+    },
+    { "bloodline": {
+      "name":"Aberrant",
+      "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"3" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"3" }
+    ],
+    "roles": [
+      { "type":"tank","value":"1" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"1" },
+      { "type":"skill","value":"3" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"1" },
+      { "type":"ranged","value":"3" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"1" },
+      { "type":"elemental","value":"3" }
+    ]
+    }
+    },
+    { "bloodline": {
+      "name":"Infernal",
+      "ability_scores": [
+      { "type":"str","value":"3" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"2" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"3" }
+    ],
+    "roles": [
+      { "type":"tank","value":"2" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"1" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+    }
+    },
+    { "bloodline": {
+      "name":"Undead",
+      "ability_scores": [
+      { "type":"str","value":"2" },
+      { "type":"dex","value":"2" },
+      { "type":"con","value":"3" },
+      { "type":"int","value":"2" },
+      { "type":"wis","value":"2" },
+      { "type":"cha","value":"3" }
+    ],
+    "roles": [
+      { "type":"tank","value":"3" },
+      { "type":"dps","value":"2" },
+      { "type":"heal","value":"2" },
+      { "type":"skill","value":"2" },
+      { "type":"companion","value":"2" }
+    ],
+    "range": [
+      { "type":"melee","value":"3" },
+      { "type":"ranged","value":"1" }
+    ],
+    "magic": [
+      { "type":"mundane","value":"1" },
+      { "type":"divine","value":"1" },
+      { "type":"arcane","value":"3" },
+      { "type":"elemental","value":"1" }
+    ]
+    }
+    }
+  ]
+}

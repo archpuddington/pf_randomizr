@@ -1,0 +1,39 @@
+body {
+  background-color:#a0a0a0;
+}
+ul {
+  list-style-type:none;
+  padding:0;
+  margin:0;
+}
+ul.wrap, ul.traits, ul.control {
+  display:flex;
+  flex-wrap:wrap;
+}
+ul.wrap {
+  flex-direction:column;
+}
+ul.traits {
+  flex-direction:row;
+}
+.wrap > li {
+  margin:10px;
+  padding:5px;
+  border:1px solid black;
+  background-color:#f0f0f0;
+  border-radius:3px;
+}
+.traits li{
+  margin:10px;
+  padding:5px;
+  background-color:white;
+  border:1px solid black;
+  border-radius: 3px;
+}
+main {
+  border:1px solid black;
+  margin:0 auto;
+  padding:10px;
+  border-radius:5px;
+  background-color:white;
+}
