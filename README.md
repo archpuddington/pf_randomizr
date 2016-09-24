@@ -7,6 +7,8 @@ All core/featured/uncommon races are in, unless they have +4 in any category
 TODO:
   -Integration for +4 races
   
+  -ADD MAGUS
+  
   -UI work
   
   -Skills/spells/feats
