@@ -19,3 +19,5 @@ TODO:
 
 PROBLEM:
   -Bardic knowledge
+  
+  -Brawler unarmed damage
