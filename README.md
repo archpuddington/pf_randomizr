@@ -16,3 +16,6 @@ TODO:
   -Data entry for class abilities/powers/feats (lvl 1)
   
   -Structure for leveling module
+
+PROBLEM:
+  -Bardic knowledge
