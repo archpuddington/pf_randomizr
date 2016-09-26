@@ -1,0 +1,65 @@
+<main>
+  <div class="gen_arcl_wrap large-12 medium-12 row">
+    <div class="gen large-4 medium-4 columns">
+      <ul class="control">
+        <li><a class="button go">Click</a></li>
+        <li>
+          <select class="pt_val">
+            <option>15</option>
+            <option>20</option>
+            <option>25</option>
+          </select>
+        </li>
+        <li>
+          <select class="trait_num">
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </li>
+        <li><select class="c_name"><option>any class</option></select></li>
+        <li><select class="r_name"><option>any race</option></select></li>
+        <li class="count"><a class="button success" href="#">--</a></li>
+      </ul>
+    </div>
+    <div class="arcl large-8 medium-8 columns">--</div>
+  </div>
+  <div class="stats_skills large-12 medium-12 row">
+    <div class="left_stat large-6 medium-6 columns">
+      <div class="stats_wrap row">
+        <div class="stats large-3 medium-3 columns"><div class="needed"></div><table></table></div>
+        <div class="hp_init large-3 medium-3 columns">
+          <div class="hp row"></div>
+          <div class="init row"></div>
+        </div>
+      </div>
+      <div class="ac row"></div>
+      <div class="def row"></div>
+      <div class="bab row"></div>
+      <div class="cmd row"></div>
+      <div class="weapon row"></div>
+    </div>
+    <div class="right_skill large-6 medium-6 columns">
+      <div class="skills"><table></table></div>
+    </div>
+  </div>
+  <div class="aci_spells large-12 medium-12 row">
+    <div class="left_aci large-8 medium-8 columns">
+      <div class="aci row">AC ITEMS</div>
+      <div class="gear_feat row">
+        <div class="gear large-6 medium-6 columns">GEAR</div>
+        <div class="feat large-6 medium-6 columns">FEATS</div>
+      </div>
+      <div class="load_pow row">
+        <div class="load_money large-6 medium-6 columns">
+          <div class="load row">LOAD</div>
+          <div class="money row">MONEY</div>
+        </div>
+        <div class="powers large-6 medium-6 columns">POWERS</div>
+      </div>
+    </div>
+    <div class="right_spells large-4 medium-4 columns">
+      <div class="spells row">SPELLS</div>
+    </div>
+  </div>
+</main>

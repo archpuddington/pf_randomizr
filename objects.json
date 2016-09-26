@@ -910,6 +910,22 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"3" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"8",
+      "l_skills":"4",
+      "c_skills": ["Appraise","Craft","Disable Device","Fly","Heal","Knowledge (arcana)","Knowledge (nature)","Perception","Profession","Sleight of Hand","Spellcraft","Survival","Use Magic Device"],
+      "saves":
+        { "level":"1","fort":"2","ref":"2","will":"0" },            
+      "bab_type":"3/4",
+      "mechanics": [
+        { "type":"feature","name":"Alchemy","level":"1" },
+        { "type":"feature","name":"Bomb","level":"1" },
+        { "type":"feature","name":"Brew Potion","level":"1" },        
+        { "type":"feature","name":"Mutagen","level":"1" },        
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_wg","value":"bomb","level":"1" },
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"bonus_feat","value":"Throw Anything","level":"1" }
       ]
     }
     },
@@ -939,6 +955,21 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"3" },
         { "type":"elemental","value":"3" }
+      ],
+      "hd":"6",
+      "l_skills":"2",
+      "c_skills": ["Appraise","Craft","Fly","Knowledge (arcana)","Knowledge (dungeoneering)","Knowledge (engineering)","Knowledge (geography)","Knowledge (history)","Knowledge (local)","Knowledge (nature)","Knowledge (nobility)","Knowledge (planes)","Knowledge (religion)","Linguistics","Profession","Spellcraft","Use Magic Device"],
+      "saves":
+        { "level":"1","fort":"0","ref":"0","will":"2" },      
+      "bab_type":"1/2",
+      "mechanics": [
+        { "type":"feature","name":"Spell Casting","level":"1" },
+        { "type":"feature","name":"Spellbooks","level":"1" },
+        { "type":"feature","name":"Cantrips","level":"1" },        
+        { "type":"feature","name":"Arcane Reservoir","level":"1" },        
+        { "type":"feature","name":"Arcane Exploits","level":"1" },        
+        { "type":"feature","name":"Consume Spells","level":"1" },                        
+        { "type":"proficient_wg","value":"simple","level":"1" }
       ]
     }
     },
@@ -969,17 +1000,20 @@
         { "type":"arcane","value":"2" },
         { "type":"elemental","value":"1" }
       ],
+      "hd":"12",
       "l_skills":"4",
       "c_skills": ["Acrobatics","Climb","Craft","Handle Animal","Intimidate","Knowledge (nature)","Perception","Ride","Survival","Swim"],
-      "bab_type":"full",
+      "saves":
+        { "level":"1","fort":"2","ref":"0","will":"0" },      
+      "bab_type":"1",
       "mechanics": [
         { "type":"feature","name":"Fast Movement","level":"1" },
         { "type":"feature","name":"Rage","level":"1" },
-        { "type":"proficient_w","value":"simple","level":"1" },
-        { "type":"proficient_w","value":"martial","level":"1" },
-        { "type":"proficient_a","value":"light","level":"1" },
-        { "type":"proficient_a","value":"medium","level":"1" },
-        { "type":"proficient_a","value":"shield","level":"1" }                
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_wg","value":"martial","level":"1" },
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"proficient_ag","value":"medium","level":"1" },
+        { "type":"proficient_ag","value":"shield","level":"1" }                
       ]
     }
     },
@@ -1009,6 +1043,46 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"3" },
         { "type":"elemental","value":"2" }
+      ],
+      "hd":"6",
+      "l_skills":"2",
+      "c_skills": ["Acrobatics","Appraise","Bluff","Climb","Craft","Diplomacy","Disguise","Escape Artist","Intimidate","Knowledge (dungeoneering)","Knowledge (engineering)","Knowledge (geography)","Knowledge (history)","Knowledge (local)","Knowledge (nature)","Knowledge (nobility)","Knowledge (planes)","Knowledge (religion)","Linguistics","Perception","Perform","Profession","Sense","Motive","Sleight","of","Hand","Spellcraft","Stealth","Use Magic Device"],
+      "saves":
+        { "level":"1","fort":"0","ref":"2","will":"2" },            
+      "bab_type":"3/4",
+      "mechanics": [
+        { "type":"feature","name":"Spell Casting","level":"1" },
+        { "type":"feature","name":"Bardic Knowledge","level":"1","result": [
+          { "type":"skill_inc","name":"Knowledge (arcana)","value":"1/2" },
+          { "type":"skill_inc","name":"Knowledge (dungeoneering)","value":"1/2" },
+          { "type":"skill_inc","name":"Knowledge (engineering)","value":"1/2" },
+          { "type":"skill_inc","name":"Knowledge (geography)","value":"1/2" },
+          { "type":"skill_inc","name":"Knowledge (history)","value":"1/2" },
+          { "type":"skill_inc","name":"Knowledge (local)","value":"1/2" },
+          { "type":"skill_inc","name":"Knowledge (nature)","value":"1/2" },
+          { "type":"skill_inc","name":"Knowledge (nobility)","value":"1/2" },                                                                      
+          { "type":"skill_inc","name":"Knowledge (planes)","value":"1/2" },
+          { "type":"skill_inc","name":"Knowledge (religion)","value":"1/2" }                    
+        ] },        
+        { "type":"feature","name":"Bardic Performance","level":"1","use":"4","stat":"5","dc": [
+          { "type":"base","value":"10" },
+          { "type":"stat","value":"5" },
+          { "type":"c_level","value":"1/2" }
+        ] },
+        { "type":"power","name":"Countersong","parent":"Bardic Performance" },
+        { "type":"power","name":"Distraction","parent":"Bardic Performance" },
+        { "type":"power","name":"Fascinate","parent":"Bardic Performance" },
+        { "type":"power","name":"Inspire Courage","parent":"Bardic Performance" },                                
+        { "type":"feature","name":"Consume Spells","level":"1" },                        
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_w","value":"longsword","level":"1" },
+        { "type":"proficient_w","value":"rapier","level":"1" },
+        { "type":"proficient_w","value":"whip","level":"1" },
+        { "type":"proficient_w","value":"sap","level":"1" },
+        { "type":"proficient_w","value":"shortsword","level":"1" },
+        { "type":"proficient_w","value":"shortbow","level":"1" },
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"proficient_ag","value":"shield","level":"1" }
       ]
     }
     },
@@ -1038,6 +1112,24 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"3" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"10",
+      "l_skills":"4",
+      "c_skills": ["Acrobatics","Climb","Craft","Handle Animal","Intimidate","Knowledge (arcana)","Perception","Ride","Spellcraft","Survival","Swim"],
+      "saves":
+        { "level":"1","fort":"2","ref":"0","will":"0" },            
+      "bab_type":"1",
+      "mechanics": [
+        { "type":"feature","name":"Bloodline","level":"1" },
+        { "type":"feature","name":"Bloodrage","level":"1","use":"4","stat":"2" },
+        { "type":"feature","name":"Fast Movement","level":"1","result": [
+          { "type":"move_inc","value":"10" }
+        ] },        
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_wg","value":"martial","level":"1" },
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"proficient_ag","value":"medium","level":"1" },
+        { "type":"proficient_ag","value":"shield","level":"1" }                
       ]
     }
     },
@@ -1047,7 +1139,7 @@
         { "type":"str","value":"3" },
         { "type":"dex","value":"2" },
         { "type":"con","value":"2" },
-        { "type":"int","value":"3" },
+        { "type":"int","value":"2" },
         { "type":"wis","value":"2" },
         { "type":"cha","value":"2" }
       ],
@@ -1067,6 +1159,30 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"1" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"10",
+      "l_skills":"4",
+      "c_skills": ["Acrobatics","Climb","Craft","Escape Artist","Handle Animal","Intimidate","Knowledge (dungeoneering)","Knowledge (local)","Perception","Profession","Ride","Sense Motive","Swim"],
+      "saves":
+        { "level":"1","fort":"2","ref":"2","will":"0" },            
+      "bab_type":"1",
+      "mechanics": [
+        { "type":"feature","name":"Brawler's Cunning","level":"1","result":[
+          { "type":"stat_increase_ref","ref":"feat_combat","stat":"3","value":"13" }
+        ] },
+        { "type":"feature","name":"Martial Flexibility","level":"1","use":"4","stat":"2" },
+        { "type":"feature","name":"Martial Training","level":"1","result": [
+          { "type":"level_counts_as","classes": ["fighter","monk"] }
+        ] },        
+        { "type":"feature","name":"Unarmed Strike","level":"1","result": [
+          { "type":"bonus_feat","name":"Improved Unarmed Strike" }
+        ] },        
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_wg","value":"close_fighter","level":"1" },        
+        { "type":"proficient_w","value":"handaxe","level":"1" },
+        { "type":"proficient_w","value":"shortsword","level":"1" },        
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"proficient_ag","value":"shield","level":"1" }                
       ]
     }
     },
@@ -1096,6 +1212,28 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"1" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"10",
+      "l_skills":"4",
+      "c_skills": ["Acrobatics","Climb","Craft","Escape Artist","Handle Animal","Intimidate","Knowledge (dungeoneering)","Knowledge (local)","Perception","Profession","Ride","Sense Motive","Swim"],
+      "saves":
+        { "level":"1","fort":"2","ref":"0","will":"0" },            
+      "bab_type":"1",
+      "mechanics": [
+        { "type":"feature","name":"Challenge","level":"1" },
+        { "type":"feature","name":"Mount","level":"1","result": [
+          { "type":"feature","name":"Animal Companion" }
+        ] },
+        { "type":"feature","name":"Order","level":"1" },        
+        { "type":"feature","name":"Tactician","level":1,"result": [
+          { "type":"bonus_feat","feat_type":"teamwork","rng":"1" }
+        ] },
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_wg","value":"martial","level":"1" },        
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"proficient_ag","value":"medium","level":"1" },
+        { "type":"proficient_ag","value":"heavy","level":"1" },                
+        { "type":"proficient_ag","value":"shield","level":"1" }                
       ]
     }
     },
@@ -1125,6 +1263,30 @@
         { "type":"divine","value":"3" },
         { "type":"arcane","value":"1" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"10",
+      "l_skills":"2",
+      "c_skills": ["Appraise","Craft","Diplomacy","Heal","Knowledge (arcana)","Knowledge (history)","Knowledge (nobility)","Knowledge (planes)","Knowledge (religion)","Linguistics","Profession","Sense Motive","Spellcraft"],
+      "bab_type":"3/4",
+      "saves":
+        { "level":"1","fort":"2","ref":"0","will":"2" },
+      "mechanics": [
+        { "type":"feature","name":"Aura","level":"1" },
+        { "type":"feature","name":"Spell Casting","level":"1" },
+        { "type":"feature","name":"Channel Energy","level":"1","use":"3","stat":"5","dc":[
+          { "type":"base","value":"10" },
+          { "type":"stat","value":"5" },
+          { "type":"c_level","value":"1/2" }
+        ] },        
+        { "type":"feature","name":"Domains","level":"1" },
+        { "type":"feature","name":"Spontaneous Casting","level":"1" },
+        { "type":"feature","name":"Bonus Languages","result": [
+          { "type":"bonus_language","rng":"1","value": ["Celestial","Infernal","Abyssal"] }
+        ] },
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"proficient_ag","value":"medium","level":"1" },
+        { "type":"proficient_ag","value":"shield","level":"1" }                
       ]
     }
     },
@@ -1154,6 +1316,54 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"3" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"8",
+      "l_skills":"4",
+      "c_skills": ["Climb","Craft","Fly","Handle Animal","Heal","Knowledge (geography)","Knowledge (nature)","Perception","Profession","Ride","Spellcraft","Survival","Swim"],
+      "bab_type":"3/4",
+      "saves":
+        { "level":"1","fort":"2","ref":"0","will":"2" },
+      "mechanics": [
+        { "type":"feature","name":"Spell Casting","level":"1" },   
+        { "type":"feature","name":"Orisons","level":"1" },
+        { "type":"feature","name":"Spontaneous Casting","level":"1" },
+        { "type":"feature","name":"Chaotic, Evil, Good, and Lawful Spells","level":"1" },        
+        { "type":"feature","name":"Bonus Languages","result": [
+          { "type":"bonus_language","rng":"1","value": ["Sylvan"] }
+        ] },
+        { "type":"feature","name":"Nature Bond","result": [
+          { "type":"feature","rng":"1","result": [
+            { "type":"feature","name":"Domains","rng":"1","result": [
+              { "type":"domain","name":"Air" },
+              { "type":"domain","name":"Animal" },
+              { "type":"domain","name":"Earth" },
+              { "type":"domain","name":"Fire" },
+              { "type":"domain","name":"Plant" },
+              { "type":"domain","name":"Water" },                                                        
+              { "type":"domain","name":"Weather" }                            
+            ] },
+            { "type":"feature","rng":"1","name":"Animal Companion" }
+          ] }
+        ] },
+        { "type":"feature","name":"Nature Sense","result": [
+          { "type":"skill_inc","name":"Knowledge (nature)","value":"2" },
+          { "type":"skill_inc","name":"Survival","value":"2" }
+        ] },
+        { "type":"feature","name":"Wild Empathy" },
+        { "type":"proficient_w","value":"club","level":"1" },
+        { "type":"proficient_w","value":"dagger","level":"1" },
+        { "type":"proficient_w","value":"dart","level":"1" },
+        { "type":"proficient_w","value":"quarterstaff","level":"1" },
+        { "type":"proficient_w","value":"scimitar","level":"1" },
+        { "type":"proficient_w","value":"scythe","level":"1" },
+        { "type":"proficient_w","value":"sickle","level":"1" },
+        { "type":"proficient_w","value":"shortspear","level":"1" },
+        { "type":"proficient_w","value":"spear","level":"1" },
+        { "type":"proficient_w","value":"sling","level":"1" },
+        { "type":"proficient_wg","value":"natural","level":"1" },        
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"proficient_ag","value":"medium","level":"1" },
+        { "type":"proficient_ag","value":"shield","level":"1" }                
       ]
     }
     },
@@ -1183,6 +1393,23 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"1" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"10",
+      "l_skills":"2",
+      "c_skills": ["Climb","Craft","Handle Animal","Intimidate","Knowledge (dungeoneering)","Knowledge (engineering)","Profession","Ride","Survival","Swim"],
+      "bab_type":"1",
+      "saves":
+        { "level":"1","fort":"2","ref":"0","will":"0" },
+      "mechanics": [
+        { "type":"feature","name":"Bonus Feats","level":"1","result": [
+          { "type":"bonus_feat","feat_type":"combat","rng":"1" }
+        ] },
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_wg","value":"martial","level":"1" },
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"proficient_ag","value":"medium","level":"1" },
+        { "type":"proficient_ag","value":"heavy","level":"1" },        
+        { "type":"proficient_ag","value":"shield","level":"1" }                
       ]
     }
     },
@@ -1212,6 +1439,27 @@
         { "type":"divine","value":"2" },
         { "type":"arcane","value":"1" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"8",
+      "l_skills":"6",
+      "c_skills": ["Climb","Craft","Handle Animal","Heal","Intimidate","Knowledge (dungeoneering)","Knowledge (geography)","Knowledge (nature)","Perception","Profession","Ride","Spellcraft","Stealth","Survival","Swim"],
+      "bab_type":"3/4",
+      "saves":
+        { "level":"1","fort":"2","ref":"2","will":"0" },
+      "mechanics": [
+        { "type":"feature","name":"Spell Casting","level":"1" },
+        { "type":"feature","name":"Orisons","level":"1" },        
+        { "type":"feature","name":"Animal Companion","level":"1" },
+        { "type":"feature","name":"Animal Focus","level":"1" },
+        { "type":"feature","name":"Nature Training","level":"1","result": [
+          { "type":"level_counts_as","classes": ["driud","ranger"] }        
+        ] },                        
+        { "type":"feature","name":"Wild Empathy","level":"1" },        
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_wg","value":"martial","level":"1" },
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"proficient_ag","value":"medium","level":"1" },
+        { "type":"proficient_ag","value":"shield","level":"1" }                
       ]
     }
     },
@@ -1241,6 +1489,42 @@
         { "type":"divine","value":"3" },
         { "type":"arcane","value":"1" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"8",
+      "l_skills":"6",
+      "c_skills": ["Bluff","Climb","Craft","Diplomacy","Disguise","Heal","Intimidate","Knowledge (arcana)","Knowledge (dungeoneering)","Knowledge (nature)","Knowledge (planes)","Knowledge (religion)","Perception","Profession","Ride","Sense Motive","Spellcraft","Stealth","Survival","Swim"],
+      "bab_type":"3/4",
+      "saves":
+        { "level":"1","fort":"2","ref":"0","will":"2" },
+      "mechanics": [
+        { "type":"feature","name":"Spell Casting","level":"1" },
+        { "type":"feature","name":"Orisons","level":"1" },        
+        { "type":"feature","name":"Domains","level":"1" },        
+        { "type":"feature","name":"Judgement","level":"1" },                
+        { "type":"feature","name":"Monster Lore","level":"1","result": [
+          { "type":"skill_inc","name":"Knowledge (arcana)","stat":"4","note":"Only on monster checks" },
+          { "type":"skill_inc","name":"Knowledge (dungeoneering)","stat":"4","note":"Only on monster checks" },
+          { "type":"skill_inc","name":"Knowledge (engineering)","stat":"4","note":"Only on monster checks" },
+          { "type":"skill_inc","name":"Knowledge (geography)","stat":"4","note":"Only on monster checks" },
+          { "type":"skill_inc","name":"Knowledge (history)","stat":"4","note":"Only on monster checks" },
+          { "type":"skill_inc","name":"Knowledge (local)","stat":"4","note":"Only on monster checks" },
+          { "type":"skill_inc","name":"Knowledge (nature)","stat":"4","note":"Only on monster checks" },
+          { "type":"skill_inc","name":"Knowledge (nobility)","stat":"4","note":"Only on monster checks" },                                                                      
+          { "type":"skill_inc","name":"Knowledge (planes)","stat":"4","note":"Only on monster checks" },
+          { "type":"skill_inc","name":"Knowledge (religion)","stat":"4","note":"Only on monster checks" }
+        ] },                
+        { "type":"feature","name":"Stern Gaze","level":"1","result": [
+          { "type":"skill_inc","name":"Intimidate","value":"1/2" },
+          { "type":"skill_inc","name":"Sense Motive","value":"1/2" }         
+        ] },
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_w","value":"hand crossbow","level":"1" },        
+        { "type":"proficient_w","value":"repeating crossbow","level":"1" },                
+        { "type":"proficient_w","value":"longbow","level":"1" },                
+        { "type":"proficient_w","value":"shortbow","level":"1" },                
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"proficient_ag","value":"medium","level":"1" },
+        { "type":"proficient_ag","value":"shield","level":"1" }                
       ]
     }
     },
@@ -1270,6 +1554,29 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"3" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"8",
+      "l_skills":"6",
+      "c_skills": ["Acrobatics","Appraise","Bluff","Climb","Craft","Diplomacy","Disable Device","Disguise","Escape Artist","Heal","Intimidate","Knowledge (dungeoneering)","Knowledge (engineering)","Knowledge (geography)","Knowledge (history)","Knowledge (local)","Knowledge (nature)","Knowledge (nobility)","Knowledge (planes)","Knowledge (religion)","Linguistics","Perception","Perform","Profession","Sense Motive","Sleight of Hand","Spellcraft","Stealth","Use Magic Device"],
+      "bab_type":"3/4",
+      "saves":
+        { "level":"1","fort":"0","ref":"2","will":"2" },
+      "mechanics": [
+        { "type":"feature","name":"Alchemy","level":"1" },
+        { "type":"feature","name":"Inspiration","level":"1" },        
+        { "type":"feature","name":"Trapfinding","level":"1","result": [
+          { "type":"skill_inc","name":"Perception","value":"1/2","note":"Bonus to locate traps" },
+          { "type":"skill_inc","name":"Disable Device","value":"1/2" },
+          { "type":"skill_inc","name":"Disable Device","value":"0","note":"Can disable magical traps"}
+        ] },
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_w","value":"hand crossbow","level":"1" },
+        { "type":"proficient_w","value":"rapier","level":"1" },
+        { "type":"proficient_w","value":"sap","level":"1" },
+        { "type":"proficient_w","value":"shortbow","level":"1" },
+        { "type":"proficient_w","value":"shortsword","level":"1" },
+        { "type":"proficient_w","value":"sword cane","level":"1" },                                        
+        { "type":"proficient_ag","value":"light","level":"1" }
       ]
     }
     },
@@ -1299,6 +1606,50 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"1" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"8",
+      "l_skills":"4",
+      "c_skills": ["Acrobatics","Climb","Craft","Escape Artist","Intimidate","Knowledge (history)","Knowledge (religion)","Perception","Perform","Profession","Ride","Sense Motive","Stealth","Swim"],
+      "bab_type":"3/4",
+      "saves":
+        { "level":"1","fort":"2","ref":"2","will":"2" },
+      "mechanics": [
+        { "type":"feature","name":"AC Bonus","level":"1","result": [
+          { "type":"stat_inc","name":"ac","stat":"4"},
+          { "type":"stat_inc","name":"cmd","stat":"4"},
+          { "type":"stat_inc","name":"ac_flat","stat":"4"}                    
+        ] },
+        { "type":"feature","name":"Flurry of Blows","level":"1","result": [
+          { "type":"attack","name":"Flurry of Blows","bab":"c_level","mod":"-2" }
+        ] },        
+        { "type":"feature","name":"Unarmed Strike","level":"1","result": [
+          { "type":"bonus_feat","name":"Improved Unarmed Strike" }
+        ] },
+        { "type":"feature","name":"Bonus Feat","level":"1","result": [
+          { "type":"bonus_feat","rng":"1","feat_type":"monk" }
+        ] },
+        { "type":"feature","name":"Stunning Fist","level":"1","result": [
+          { "type":"bonus_feat","name":"Stunning Fist" }
+        ] },
+        { "type":"proficient_w","value":"brass knuckles","level":"1" },
+        { "type":"proficient_w","value":"cestus","level":"1" },
+        { "type":"proficient_w","value":"club","level":"1" },
+        { "type":"proficient_w","value":"light crossbow","level":"1" },
+        { "type":"proficient_w","value":"heavy crossbow","level":"1" },
+        { "type":"proficient_w","value":"dagger","level":"1" },
+        { "type":"proficient_w","value":"handaxe","level":"1" },
+        { "type":"proficient_w","value":"javelin","level":"1" },
+        { "type":"proficient_w","value":"kama","level":"1" },
+        { "type":"proficient_w","value":"nunchaku","level":"1" },
+        { "type":"proficient_w","value":"quarterstaff","level":"1" },
+        { "type":"proficient_w","value":"sai","level":"1" },
+        { "type":"proficient_w","value":"shortspear","level":"1" },
+        { "type":"proficient_w","value":"shortsword","level":"1" },
+        { "type":"proficient_w","value":"shuriken","level":"1" },
+        { "type":"proficient_w","value":"siangham","level":"1" },
+        { "type":"proficient_w","value":"sling","level":"1" },
+        { "type":"proficient_w","value":"spear","level":"1" },                                                        
+        { "type":"proficient_w","value":"temple sword","level":"1" }                                                               
       ]
     }
     },
@@ -1328,6 +1679,23 @@
         { "type":"divine","value":"2" },
         { "type":"arcane","value":"1" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"8",
+      "l_skills":"4",
+      "c_skills": ["Craft","Diplomacy","Heal","Knowledge (history)","Knowledge (planes)","Knowledge (religion)","Profession","Sense Motive","Spellcraft"],
+      "bab_type":"3/4",
+      "saves":
+        { "level":"1","fort":"0","ref":"0","will":"2" },
+      "mechanics": [
+        { "type":"feature","name":"Spell Casting","level":"1" },
+        { "type":"feature","name":"Mystery","level":"1" },        
+        { "type":"feature","name":"Oracle's Curse","level":"1" },
+        { "type":"feature","name":"Orisons","level":"1" },        
+        { "type":"feature","name":"Revelation","level":"1" },        
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"proficient_ag","value":"medium","level":"1" },
+        { "type":"proficient_ag","value":"shield","level":"1" }                
       ]
     }
     },
@@ -1357,6 +1725,23 @@
         { "type":"divine","value":"3" },
         { "type":"arcane","value":"1" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"10",
+      "l_skills":"2",
+      "c_skills": ["Craft","Diplomacy","Handle Animal","Heal","Knowledge (nobility)","Knowledge (religion)","Profession","Ride","Sense Motive","Spellcraft"],
+      "bab_type":"1",
+      "saves":
+        { "level":"1","fort":"0","ref":"0","will":"2" },
+      "mechanics": [
+        { "type":"feature","name":"Aura of Good","level":"1" },
+        { "type":"feature","name":"Detect Evil","level":"1" },        
+        { "type":"feature","name":"Smite Evil","level":"1" },
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_wg","value":"martial","level":"1" },
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"proficient_ag","value":"medium","level":"1" },
+        { "type":"proficient_ag","value":"heavy","level":"1" },        
+        { "type":"proficient_ag","value":"shield","level":"1" }                
       ]
     }
     },
@@ -1386,6 +1771,38 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"2" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"10",
+      "l_skills":"6",
+      "c_skills": ["Climb","Craft","Handle Animal","Heal","Intimidate","Knowledge (dungeoneering)","Knowledge (geography)","Knowledge (nature)","Perception","Profession","Ride","Spellcraft","Stealth","Survival","Swim"],
+      "bab_type":"1",
+      "saves":
+        { "level":"1","fort":"2","ref":"2","will":"0" },
+      "mechanics": [
+        { "type":"feature","name":"Favored Enemy","level":"1","result": [
+          { "type":"skill_inc","name":"Bluff","value":"1/2","note":"Only for favored enemy" },
+          { "type":"skill_inc","name":"Knowledge (arcana)","stat":"4","note":"Only for favored enemy" },
+          { "type":"skill_inc","name":"Knowledge (dungeoneering)","stat":"4","note":"Only for favored enemy" },
+          { "type":"skill_inc","name":"Knowledge (engineering)","stat":"4","note":"Only for favored enemy" },
+          { "type":"skill_inc","name":"Knowledge (geography)","stat":"4","note":"Only for favored enemy" },
+          { "type":"skill_inc","name":"Knowledge (history)","stat":"4","note":"Only for favored enemy" },
+          { "type":"skill_inc","name":"Knowledge (local)","stat":"4","note":"Only for favored enemy" },
+          { "type":"skill_inc","name":"Knowledge (nature)","stat":"4","note":"Only for favored enemy" },
+          { "type":"skill_inc","name":"Knowledge (nobility)","stat":"4","note":"Only for favored enemy" },                                                                      
+          { "type":"skill_inc","name":"Knowledge (planes)","stat":"4","note":"Only for favored enemy" },
+          { "type":"skill_inc","name":"Knowledge (religion)","stat":"4","note":"Only for favored enemy" },                                               
+          { "type":"skill_inc","name":"Perception","value":"1/2","note":"Only for favored enemy" },
+          { "type":"skill_inc","name":"Sense Motive","value":"1/2","note":"Only for favored enemy" },
+          { "type":"skill_inc","name":"Survival","value":"1/2","note":"Only for favored enemy" }
+        ] },
+        { "type":"feature","name":"Track","level":"1","result": [
+          { "type":"skill_inc","name":"Survival","value":"1/2","note":"Only for tracking"}
+        ] },        
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_wg","value":"martial","level":"1" },
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"proficient_ag","value":"medium","level":"1" },
+        { "type":"proficient_ag","value":"shield","level":"1" }                
       ]
     }
     },
@@ -1415,6 +1832,26 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"1" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"8",
+      "l_skills":"8",
+      "c_skills": ["Acrobatics","Appraise","Bluff","Climb","Craft","Diplomacy","Disable Device","Disguise","Escape Artist","Intimidate","Knowledge (dungeoneering)","Knowledge (local)","Linguistics","Perception","Perform","Profession","Sense Motive","Sleight of Hand","Stealth","Swim","Use Magic Device"],
+      "bab_type":"3/4",
+      "saves":
+        { "level":"1","fort":"0","ref":"2","will":"0" },
+      "mechanics": [
+        { "type":"feature","name":"Sneak Attack","level":"1" },
+        { "type":"feature","name":"Trapfinding","level":"1","result": [
+          { "type":"skill_inc","name":"Perception","value":"1/2","note":"Only to locate traps" }, 
+          { "type":"skill_inc","name":"Disable Device","value":"1/2","note":"Can disarm magical traps" }
+        ] },        
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_w","value":"hand crossbow","level":"1" },
+        { "type":"proficient_w","value":"rapier","level":"1" },
+        { "type":"proficient_w","value":"sap","level":"1" },
+        { "type":"proficient_w","value":"shortbow","level":"1" },
+        { "type":"proficient_w","value":"shortsword","level":"1" },
+        { "type":"proficient_ag","value":"light","level":"1" }
       ]
     }
     },
@@ -1444,6 +1881,21 @@
         { "type":"divine","value":"3" },
         { "type":"arcane","value":"1" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"8",
+      "l_skills":"4",
+      "c_skills": ["Craft","Diplomacy","Fly","Handle Animal","Heal","Knowledge (nature)","Knowledge (planes)","Knowledge (religion)","Profession","Ride","Spellcraft","Survival"],
+      "bab_type":"1/2",
+      "saves":
+        { "level":"1","fort":"0","ref":"0","will":"2" },
+      "mechanics": [
+        { "type":"feature","name":"Spell Casting","level":"1" },
+        { "type":"feature","name":"Orisons","level":"1" },        
+        { "type":"feature","name":"Spirit","level":"1" },        
+        { "type":"feature","name":"Spirit Animal","level":"1" },                        
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"proficient_ag","value":"medium","level":"1" }        
       ]
     }
     },
@@ -1473,6 +1925,37 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"2" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"8",
+      "l_skills":"4",
+      "c_skills": ["Acrobatics","Appraise","Bluff","Climb","Craft","Diplomacy","Escape Artist","Handle Animal","Intimidate","Knowledge (dungeoneering)","Knowledge (engineering)","Knowledge (geography)","Knowledge (history)","Knowledge (local)","Knowledge (nature)","Knowledge (nobility)","Knowledge (planes)","Knowledge (religion)","Linguistics","Perception","Perform (oratory)","Perform (percussion)","Perform (sing)","Perform (string)","Perform (winderrata)","Profession","Ride","Sense Motive","Spellcraft","Swim","Use Magic Device"],
+      "bab_type":"3/4",
+      "saves":
+        { "level":"1","fort":"2","ref":"0","will":"2" },
+      "mechanics": [
+        { "type":"feature","name":"Spell Casting","level":"1" },
+        { "type":"feature","name":"Cantrips","level":"1" },        
+        { "type":"feature","name":"Bardic Knowledge","level":"1","result": [
+          { "type":"skill_inc","name":"Knowledge (arcana)","value":"1/2" },
+          { "type":"skill_inc","name":"Knowledge (dungeoneering)","value":"1/2" },
+          { "type":"skill_inc","name":"Knowledge (engineering)","value":"1/2" },
+          { "type":"skill_inc","name":"Knowledge (geography)","value":"1/2" },
+          { "type":"skill_inc","name":"Knowledge (history)","value":"1/2" },
+          { "type":"skill_inc","name":"Knowledge (local)","value":"1/2" },
+          { "type":"skill_inc","name":"Knowledge (nature)","value":"1/2" },
+          { "type":"skill_inc","name":"Knowledge (nobility)","value":"1/2" },                                                                      
+          { "type":"skill_inc","name":"Knowledge (planes)","value":"1/2" },
+          { "type":"skill_inc","name":"Knowledge (religion)","value":"1/2" }                    
+        ] },        
+        { "type":"feature","name":"Raging Song","level":"1","use":"3","stat":"5" },
+        { "type":"power","name":"Inspired Rage","parent":"Raging Song" },
+        { "type":"feature","name":"Scribe Scroll","level":"1","result": [
+          { "type":"bonus_feat","name":"Scribe Scroll" }
+        ] },
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"proficient_ag","value":"medium","level":"1" },
+        { "type":"proficient_ag","value":"shield","level":"1" }                        
       ]
     }
     },
@@ -1502,6 +1985,23 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"1" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"10",
+      "l_skills":"6",
+      "c_skills": ["Acrobatics","Bluff","Climb","Craft","Disguise","Heal","Intimidate","Knowledge (dungeoneering)","Knowledge (geography)","Knowledge (local)","Perception","Profession","Ride","Sense Motive","Stealth","Survival","Swim"],
+      "bab_type":"1",
+      "saves":
+        { "level":"1","fort":"2","ref":"2","will":"0" },
+      "mechanics": [
+        { "type":"feature","name":"Studied Target","level":"1" },
+        { "type":"feature","name":"Track","level":"1","result": [
+          { "type":"skill_inc","name":"Perception","value":"1/2","note":"Increase to follow tracks" }
+        ] },        
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_wg","value":"martial","level":"1" },        
+        { "type":"proficient_ag","value":"light","level":"1" },
+        { "type":"proficient_ag","value":"medium","level":"1" },
+        { "type":"proficient_ag","value":"shield","level":"1" }                        
       ]
     }
     },
@@ -1531,6 +2031,21 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"3" },
         { "type":"elemental","value":"3" }
+      ],
+      "hd":"6",
+      "l_skills":"2",
+      "c_skills": ["Appraise","Bluff","Craft","Fly","Intimidate","Knowledge (arcana)","Profession","Spellcraft","Use Magic Device"],
+      "bab_type":"1/2",
+      "saves":
+        { "level":"1","fort":"0","ref":"0","will":"2" },
+      "mechanics": [
+        { "type":"feature","name":"Spell Casting","level":"1" },
+        { "type":"feature","name":"Cantrips","level":"1" },        
+        { "type":"feature","name":"Bloodlines","level":"1" },        
+        { "type":"feature","name":"Eschew Materials","level":"1","result": [
+          { "type":"bonus_feat","name":"Eschew Materials" }
+        ] },        
+        { "type":"proficient_wg","value":"simple","level":"1" }
       ]
     }
     },
@@ -1560,6 +2075,23 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"3" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"8",
+      "l_skills":"2",
+      "c_skills": ["Craft","Fly","Handle Animal","Knowledge","Linguistics","Profession","Ride","Spellcraft","Use Magic Device"],
+      "bab_type":"3/4",
+      "saves":
+        { "level":"1","fort":"0","ref":"0","will":"2" },
+      "mechanics": [
+        { "type":"feature","name":"Spell Casting","level":"1" },
+        { "type":"feature","name":"Cantrips","level":"1" },        
+        { "type":"feature","name":"Eidolon","level":"1" },        
+        { "type":"feature","name":"Life Link","level":"1" },        
+        { "type":"feature","name":"Summon Monster I","level":"1","result": [
+          { "type":"spell","name":"Summon Monster I","use":"3","mod":"5" }
+        ] },                
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_ag","value":"light","level":"1" }        
       ]
     }
     },
@@ -1589,6 +2121,23 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"1" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"8",
+      "l_skills":"2",
+      "c_skills": ["Craft","Fly","Handle Animal","Knowledge (dungeoneering)","Knowledge (engineering)","Knowledge (geography)","Knowledge (history)","Knowledge (local)","Knowledge (nature)","Knowledge (nobility)","Knowledge (planes)","Knowledge (religion)","Linguistics","Profession","Ride","Spellcraft","Use Magic Device"],
+      "bab_type":"3/4",
+      "saves":
+        { "level":"1","fort":"0","ref":"0","will":"2" },
+      "mechanics": [
+        { "type":"feature","name":"Spell Casting","level":"1" },
+        { "type":"feature","name":"Cantrips","level":"1" },        
+        { "type":"feature","name":"Eidolon","level":"1" },        
+        { "type":"feature","name":"Life Link","level":"1" },        
+        { "type":"feature","name":"Summon Monster I","level":"1","result": [
+          { "type":"power","name":"Summon Monster I","use":"3","mod":"5" }
+        ] },                
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_ag","value":"light","level":"1" }        
       ]
     }
     },
@@ -1618,6 +2167,35 @@
         { "type":"divine","value":"2" },
         { "type":"arcane","value":"1" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"8",
+      "l_skills":"2",
+      "c_skills": ["Climb","Craft","Diplomacy","Handle Animal","Heal","Intimidate","Knowledge (engineering)","Knowledge (religion)","Profession","Ride","Sense Motive","Spellcraft","Survival","Swim"],
+      "bab_type":"3/4",
+      "saves":
+        { "level":"1","fort":"2","ref":"0","will":"2" },
+      "mechanics": [
+        { "type":"feature","name":"Spell Casting","level":"1" },
+        { "type":"feature","name":"Orisons","level":"1" },        
+        { "type":"feature","name":"Spontaneous Casting","level":"1" },        
+        { "type":"feature","name":"Aura","level":"1" },        
+        { "type":"feature","name":"Blessings","level":"1","result": [
+          { "type":"power","name":"Blessings","use":"3","mod":"1/2","dc": [
+            { "type":"base","value":"10" },
+            { "type":"stat","value":"4" },
+            { "type":"c_level","value":"1/2" }
+          ] }
+        ] },
+        { "type":"feature","name":"Sacred Weapon","level":"1" },                                
+        { "type":"feature","name":"Bonus Languages","result": [
+          { "type":"bonus_language","rng":"1","value": ["Celestial","Infernal","Abyssal"] }
+        ] },
+        { "type":"proficient_wg","value":"simple","level":"1" },
+        { "type":"proficient_wg","value":"martial","level":"1" },
+        { "type":"proficient_ag","value":"light","level":"1" },        
+        { "type":"proficient_ag","value":"medium","level":"1" },        
+        { "type":"proficient_ag","value":"heavy","level":"1" },                        
+        { "type":"proficient_ag","value":"shield","level":"1" }                
       ]
     }
     },
@@ -1647,6 +2225,19 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"3" },
         { "type":"elemental","value":"1" }
+      ],
+      "hd":"6",
+      "l_skills":"2",
+      "c_skills": ["Craft","Fly","Heal","Intimidate","Knowledge (arcana)","Knowledge (history)","Knowledge (nature)","Knowledge (planes)","Profession","Spellcraft","Use Magic Device"],
+      "bab_type":"1/2",
+      "saves":
+        { "level":"1","fort":"0","ref":"0","will":"2" },
+      "mechanics": [
+        { "type":"feature","name":"Spell Casting","level":"1" },
+        { "type":"feature","name":"Hex","level":"1" },        
+        { "type":"feature","name":"Patron","level":"1" },        
+        { "type":"feature","name":"Familiar","level":"1" },        
+        { "type":"proficient_wg","value":"simple","level":"1" }
       ]
     }
     },
@@ -1676,6 +2267,30 @@
         { "type":"divine","value":"1" },
         { "type":"arcane","value":"3" },
         { "type":"elemental","value":"3" }
+      ],
+      "hd":"6",
+      "l_skills":"2",
+      "c_skills": ["Appraise","Craft","Fly","Knowledge (dungeoneering)","Knowledge (engineering)","Knowledge (geography)","Knowledge (history)","Knowledge (local)","Knowledge (nature)","Knowledge (nobility)","Knowledge (planes)","Knowledge (religion)","Linguistics","Profession","and Spellcraft"],
+      "bab_type":"1/2",
+      "saves":
+        { "level":"1","fort":"0","ref":"0","will":"2" },
+      "mechanics": [
+        { "type":"feature","name":"Spell Casting","level":"1" },
+        { "type":"feature","name":"Bonus Languages","result": [
+          { "type":"bonus_language","rng":"1","value": ["Draconic"] }
+        ] },
+        { "type":"feature","name":"Arcane Bond","level":"1" },        
+        { "type":"feature","name":"Cantrips","level":"1" },        
+        { "type":"feature","name":"Spellbook","level":"1" },        
+        { "type":"feature","name":"Arcane School","level":"1" },                
+        { "type":"feature","name":"Scribe Scroll","level":"1","result": [
+          { "type":"bonus_feat","name":"Scribe Scroll" }
+        ] },    
+        { "type":"proficient_w","value":"club","level":"1" },
+        { "type":"proficient_w","value":"dagger","level":"1" },
+        { "type":"proficient_w","value":"light crossbow","level":"1" },
+        { "type":"proficient_w","value":"heavy crossbow","level":"1" },
+        { "type":"proficient_w","value":"quarterstaff","level":"1" }
       ]
     }
    }
@@ -1805,6 +2420,22 @@
    "alignment": [
      { "type":"L","value":"3" },
      { "type":"G","value":"2" }
+   ]
+   }
+  },
+  { "race": {
+   "name":"goblin",
+   "ability_scores": [
+     { "type":"str","value":"1" },
+     { "type":"dex","value":"4" },
+     { "type":"con","value":"2" },
+     { "type":"int","value":"2" },
+     { "type":"wis","value":"2" },
+     { "type":"cha","value":"1" }
+   ],
+   "alignment": [
+     { "type":"L","value":"2" },
+     { "type":"G","value":"3" }
    ]
    }
   },
@@ -4301,7 +4932,7 @@
     }
     },
     { "bloodline": {
-      "name":"Aberrant",
+      "name":"Fey",
       "ability_scores": [
       { "type":"str","value":"2" },
       { "type":"dex","value":"3" },
@@ -4387,5 +5018,174 @@
     ]
     }
     }
-  ]
+  ],
+  "skills": [
+  {  "skill": {
+        "name":"Acrobatics",
+        "stat":"1"
+    }
+  },
+  {  "skill": {
+        "name":"Appraise",
+        "stat":"3"
+    }
+  },
+  {  "skill": {
+        "name":"Bluff",
+        "stat":"5"
+    }
+  },
+  {  "skill": {
+        "name":"Climb",
+        "stat":"0"
+    }
+  },
+  {  "skill": {
+        "name":"Craft",
+        "stat":"3"
+    }
+  },
+  {  "skill": {
+        "name":"Diplomacy",
+        "stat":"5"
+    }
+  },
+  {  "skill": {
+        "name":"Disable Device",
+        "stat":"1"
+    }
+  },
+  {  "skill": {
+        "name":"Escape Artist",
+        "stat":"1"
+    }
+  },
+  {  "skill": {
+        "name":"Fly",
+        "stat":"1"
+    }
+  },
+  {  "skill": {
+        "name":"Handle Animal",
+        "stat":"5"
+    }
+  },
+  {  "skill": {
+        "name":"Heal",
+        "stat":"4","note":"Only on monster checks"
+    }
+  },
+  {  "skill": {
+        "name":"Intimidate",
+        "stat":"5"
+    }
+  },
+  {  "skill": {
+        "name":"Knowledge (arcana)",
+        "stat":"3"
+    }
+  },
+  {  "skill": {
+        "name":"Knowledge (dungeoneering)",
+        "stat":"3"
+    }
+  },
+  {  "skill": {
+        "name":"Knowledge (engineering)",
+        "stat":"3"
+    }
+  },
+  {  "skill": {
+        "name":"Knowledge (geography)",
+        "stat":"3"
+    }
+  },
+  {  "skill": {
+        "name":"Knowledge (history)",
+        "stat":"3"
+    }
+  },
+  {  "skill": {
+        "name":"Knowledge (local)",
+        "stat":"3"
+    }
+  },
+  {  "skill": {
+        "name":"Knowledge (nature)",
+        "stat":"3"
+    }
+  },
+  {  "skill": {
+        "name":"Knowledge (planes)",
+        "stat":"3"
+    }
+  },
+  {  "skill": {
+        "name":"Knowledge (religion)",
+        "stat":"3"
+    }
+  },
+  {  "skill": {
+        "name":"Linguistics",
+        "stat":"3"
+    }
+  },
+  {  "skill": {
+        "name":"Perception",
+        "stat":"4","note":"Only on monster checks"
+    }
+  },
+  {  "skill": {
+        "name":"Perform",
+        "stat":"5"
+    }
+  },
+  {  "skill": {
+        "name":"Profession",
+        "stat":"4","note":"Only on monster checks"
+    }
+  },
+  {  "skill": {
+        "name":"Ride",
+        "stat":"1"
+    }
+  },
+  {  "skill": {
+        "name":"Sense Motive",
+        "stat":"4","note":"Only on monster checks"
+    }
+  },
+  {  "skill": {
+        "name":"Sleight of Hand",
+        "stat":"1"
+    }
+  },
+  {  "skill": {
+        "name":"Spellcraft",
+        "stat":"3"
+    }
+  },
+  {  "skill": {
+        "name":"Stealth",
+        "stat":"1"
+    }
+  },
+  {  "skill": {
+        "name":"Survival",
+        "stat":"4","note":"Only on monster checks"
+    }
+  },
+  {  "skill": {
+        "name":"Swim",
+        "stat":"0"
+    }
+  },
+  {  "skill": {
+        "name":"Use Magic Device",
+        "stat":"5"
+    }
+  }
+  ],
+  "spells_known": [],
+  "spells_day": []
 }

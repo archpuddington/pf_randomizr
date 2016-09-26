@@ -1,0 +1,35 @@
+body {
+  background-color:#a0a0a0;
+}
+ul {
+  list-style-type:none;
+  padding:0;
+  margin:0;
+}
+ul.control, .def ul, .ac ul, .needed ul {
+  display:flex;
+  flex-wrap:wrap;
+}
+.def ul, .ac ul, .needed ul {
+  flex-direction:row;
+}
+.def ul li, .ac ul li, .needed ul li {
+  margin:5px;
+  text-align:center;
+}
+main {
+  margin:0 auto;
+  padding:10px;
+  border-radius:5px;
+  background-color:white;
+}
+.stats_skills, .aci_spells {
+  display:none;
+}
+.gen_arcl_wrap, .stats_wrap, .def, .bab, .ac, .cmd {
+  background-color:#f0f0f0;
+  border:1px solid white;
+  border-radius:5px;
+  padding:10px;
+  margin-bottom:10px;
+}
