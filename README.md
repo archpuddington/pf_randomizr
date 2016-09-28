@@ -26,3 +26,5 @@ TODO:
   -Add Racial bonuses (ac, atk, etc) to obj data
   
   -Skill selection package
+  
+  -Ifrits have some complicated fire sorceror garbage, might need to be angularized to actually work
