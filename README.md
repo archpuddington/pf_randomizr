@@ -11,7 +11,7 @@ NEXT NEXT NEXT STEP: Add in leveling algorithm
 TODO:
   -Add Magus
   
-  -Add +4 races
+  -Add Uncommon races
   
   -Skills/spells/feats
   
