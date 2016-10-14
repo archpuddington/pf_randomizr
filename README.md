@@ -4,7 +4,7 @@ Pathfinder character generator
 All Core/APG/ACG classes are in
 All core/featured/uncommon races are in, unless they have +4 in any category
 
-NEXT: Update objects.json for new feature/result retrieval structure, then update generation logic: skills, saves, bab, hp, and incorporate level
+NEXT: Update objects.json for new feature/result retrieval structure, then update generation logic: skills, saves, bab, hp, and incorporate level (math: total bab = math.floor(class_level*bab_type)
 
 TODO:
   -Add Magus
