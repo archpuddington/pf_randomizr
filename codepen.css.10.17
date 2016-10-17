@@ -1,0 +1,61 @@
+body {
+  background-color:#a0a0a0;
+}
+ul {
+  list-style-type:none;
+  padding:0;
+  margin:0;
+}
+ul.control, .def ul, .ac ul, .weapon ul, .armor ul {
+  display:flex;
+  flex-wrap:wrap;
+}
+.def ul, .ac ul, .weapon ul, .armor ul {
+  flex-direction:row;
+}
+.def ul li, .ac ul li, .weapon ul li, .armor ul li {
+  margin:5px;
+  text-align:center;
+}
+main {
+  margin:0 auto;
+  padding:10px;
+  border-radius:5px;
+  background-color:white;
+}
+.stats_skills, .aci_spells {
+  display:none;
+}
+.gen_arcl_wrap, .stats_wrap, .def, .bab, .ac, .cmd, .feat, .weapon, .armor, .spells {
+  background-color:#f0f0f0;
+  border:1px solid white;
+  border-radius:5px;
+  padding:10px;
+  margin-bottom:10px;
+}
+.pencil, .pencil *, .pencil-big, .pencil-big *, .pencil-huge, .pencil-huge * {
+  font-family: 'Reenie Beanie';
+}
+.pencil-big, .pencil-big * {
+  font-size:30px;
+}
+.pencil-huge, .pencil-huge * {
+  font-size:40px;
+}
+.skills table tr th.skill {
+  text-align:left;
+}
+.skills table td, .stats table td {
+  padding:3px 10px;
+}
+.needed {
+  margin-left:-1em;
+}
+.stats table tr th {
+  text-align:left;
+}
+
+/*NOT DONE*/
+.bab, .def {
+  background-color:#ff9999
+}
