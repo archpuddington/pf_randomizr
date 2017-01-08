@@ -2,18 +2,18 @@
 Pathfinder character generator
 
 All Core/APG/ACG classes are in
-All core/featured/uncommon races are in, unless they have +4 in any category
+All core/featured/uncommon races are in
+Normalize fn has been updated- works i think, there's a bit of a ghost in the machine there
+Leveling has partial support
 
-NEXT: Update objects.json for new feature/result retrieval structure, then update generation logic: skills, saves, bab, hp, and incorporate level (math: total bab = math.floor(class_level*bab_type))
+NEXT current: finish ui upgrade
+
+NEXT 3 months ago: Update objects.json for new feature/result retrieval structure, then update generation logic: skills, saves, bab, hp, and incorporate level (math: total bab = math.floor(class_level*bab_type))
 
 TODO:
-  -Add Magus
+  -Add Magus, special classes
   
-  -Add Uncommon races
-  
-  -Skills/spells/feats
-  
-  -Structure for leveling module
+  -spells/feats
   
   -Add unarmed damage table
   
