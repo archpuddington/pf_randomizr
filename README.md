@@ -26,3 +26,9 @@ TODO:
   -Skill selection package
   
   -Ifrits have some complicated fire sorceror garbage, might need to be angularized to actually work
+  
+  -Inventory interface: randomized + chosen. "Generate New" button generates full inventory based on gold max, but user can update counts/items, with cusom items options. recorded with saves. Maybe separate inv generation button.
+  
+  -Spellbook interface- from spells known, select spells per day. Randomize both. allow for customization.
+  
+  -Updating core stats/skills? feat selection? is this a character builder tool now rather than a randomizer if I add the spell/inventory trackers?
