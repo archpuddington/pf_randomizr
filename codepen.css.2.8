@@ -1,0 +1,205 @@
+.row .row {
+  margin-left:0;
+  margin-right:0;
+}
+ul {
+  list-style-type:none;
+  padding:0;
+  margin:0;
+}
+.button.expanded.top-jump {
+  display:none;
+  position:fixed;
+  bottom:0;
+}
+#list {
+  background-color:#f0f0f0;
+  padding:10px;
+  margin-bottom:10px;  
+  display:none;
+  li {
+    cursor:pointer;
+    .delete {
+      float:right;
+    }
+  }
+  li:hover {
+    background-color:#c0c0c0;
+  }
+  .clear {
+    float:right;
+    display:inline;
+    cursor:pointer;
+  }
+}
+#sheet {
+  #gen_min {
+    background-color:#f0f0f0;
+    padding:10px;
+    a {
+      width:92%;
+      margin:0 4%;
+      padding:20px 25px;
+    }
+  }
+  #sheet_nav_wrap {
+    background-color:#f0f0f0;
+    padding:10px;
+    margin-bottom:10px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    a {
+      padding:20px 25px;
+      margin:2px auto;
+    }
+  }
+  #modal_wrap {
+    display:none;
+    opacity:0.9;
+    background-color:#c0c0c0;
+    min-height:30vh;
+    max-height:50vh;
+    position:fixed;
+    top:20vh;
+    .modal_control {
+      float:right;
+    }
+    .modal {
+      text-align:center;
+      padding:20px;
+    }
+  }
+  #stats_wrap {
+    table {
+      td {
+        text-align:center;
+      }
+    }
+  }
+  #quality_wrap {
+    max-width:100%;
+  }
+  #storage_wrap {
+    .save {
+      display:none;
+      float:right;
+      cursor:pointer;
+      img {
+        height:40px;
+      }
+    }
+    .save:hover, .clear:hover {
+      background-color:#a0a0a0;
+    }
+
+  }
+  #general_wrap {
+    .general {
+      text-align:center;
+    }
+  }
+  #skills_wrap {
+    table {
+      text-align:center;
+      .table-class, .table-race {
+        display:none;
+      }
+    }
+    padding-bottom:60px;
+  }
+}
+#defense_wrap {
+  display:none;
+  border-top:1px solid #a0a0a0;
+  text-align:center;
+  padding:20px 0;
+}
+#offense_wrap {
+  display:none;
+  border-top:1px solid #a0a0a0;  
+  text-align:center;
+  padding:20px 0;
+}
+#powers_wrap {
+  display:none;
+  border-top:1px solid #a0a0a0;
+  text-align:center;
+  padding:20px 0;
+}
+#header {
+  .selected {
+      background-color:#f0f0f0;
+  }
+  .icon {
+    text-align:center;
+    display:inline-block;
+    img {
+      width:50px; 
+    }
+    .book, .sheet {
+      width:50px;
+      padding:7.5px;
+    } 
+    &:hover {
+      cursor:pointer;
+      background-color:#f0f0f0;
+    }
+  }
+  margin-bottom:-1px;
+}
+#gen {
+  display:none;  
+  background-color:#f0f0f0;
+  border:1px solid white;
+  border-radius:5px;
+  padding:10px;
+  margin-bottom:10px;
+}
+.control {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+}
+#display {
+  .card_display {
+    border:1px solid black;
+    height:200px;
+    overflow-y:auto;
+  }
+}
+.nav_card {
+  border:1px solid black;
+  height:30px;
+  text-align:center;
+  &:hover {
+    cursor:pointer;
+  }
+}
+#nav {
+  .slick-current {
+    background-color:rgb(244,244,244);
+    margin:5px auto;
+  } 
+}
+
+@media only screen 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    #display {
+      width:300px;
+      font-size:8px;
+      .skills {
+        td {
+          img {
+            width:50%;
+            height:50%;
+          }
+        }
+        .total {
+          font-size:12px;
+        }
+      }
+    }
+
+}

@@ -1,0 +1,1353 @@
+$(document).ready(function() {  
+  var object_storage = ( function(){
+    var json;
+    $.ajax({
+      async:false,
+      type: "GET",
+      url: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/333520/objects.json",
+      dataType: "json",
+      success : function(data) {
+        json = data;
+      }
+    });
+    return { getJSON : function(){
+      if (json) return json;
+    }};
+    })();
+
+  var object_list = object_storage.getJSON();
+  var obj_race = object_list.races;
+  var obj_class = object_list.classes;
+  var obj_trait = object_list.traits;
+  var obj_skill = object_list.skills;
+  var obj_domain = object_list.domains;
+  var obj_school = object_list.schools;
+  var obj_bloodline = object_list.bloodlines;
+  var characters = [];
+  var ch_var = false;
+  
+  
+  var r_len = obj_race.length;
+  var c_len = obj_class.length;
+  for(var i=0;i<r_len;i++) {
+    $('.r_name').append('<option>'+obj_race[i].race.name+'</option>'); 
+  }
+  for(var i=0;i<c_len;i++) {
+    $('.c_name').append('<option>'+obj_class[i].class.name+'</option>');
+  }
+
+  $('#gen .go, #gen_min').click(function(){
+    var pt_val = $('.pt_val').val();
+    var trait_num = $('.trait_num').val();
+    var req_c = $('.c_name').val();
+    var req_r = $('.r_name').val();
+    var req_level = $('.level_num').val();
+    ch_var = false;
+
+    while(ch_var==false) {
+      ch_var = gen_character(pt_val,trait_num,req_level,req_c,req_r);
+    }
+    
+    if(ch_var) {
+      construct_character(ch_var);
+    }
+    
+    //display initial
+    $('#offense_wrap,#defense_wrap,#powers_wrap,#feats_wrap,#general_wrap').show();
+    
+  });
+  $('#storage_wrap .save').click(function(){
+    var stringified = JSON.stringify(ch_var);
+    localStorage.setItem(localStorage.length,stringified);
+  });
+
+  $('#list .clear').click(function(){
+    localStorage.clear();
+    $('#list ul').html('<li>No saved characters</li>');
+  });
+  $('#header .icon').click(function(){
+    $('.icon').removeClass('selected');
+    $(this).addClass('selected');
+    var nav = $(this).find($('img')).attr('class');
+    if(nav == 'book') {
+      $('#gen, #sheet').hide();
+      //pop list
+      //reset
+      $('#list ul').html('');
+      for (var i=0;i<localStorage.length;i++ ) {
+        var ls = localStorage.getItem(i);
+        var character;
+        if(ls) { character = JSON.parse(ls); }
+        else { character = false; }
+        if(character) {
+          var line = '<u>'+character.alignment+' '+character.race+' '+character.class_name+' ('+character.level+')</u>';
+          $('#list ul').append('<li id="local_'+i+'" class="list_char"><span class="character">'+line+'</span> <a href="#" class="delete">DELETE</a></li>');
+        }
+      }
+      if($('#list ul').html()=='') { $('#list ul').html('<li>No saved characters</li>'); }
+      $('#list').show();
+    } else if(nav == 'gear') {
+      $('#sheet, #list').hide();
+      $('#gen').show();
+    } else if(nav == 'sheet') {
+      $('#gen, #list').hide();
+      $('#sheet').show();
+    }
+      $('#list .list_char').on('click',function(){
+        var cid = $(this).attr('id');
+        var cid_reg = cid.replace('local_','');
+        var local_char = localStorage.getItem(cid_reg);
+        if(local_char) { construct_character(JSON.parse(local_char)); }
+      });
+      $('#list .delete').on('click',function(){    
+        var ls_id = $(this).closest('li').attr('id');
+        var ls_regex = ls_id.replace(/local_/,'');
+        localStorage.setItem(ls_regex,'');
+        $(this).closest('li').remove();
+      });  
+
+  });
+  $('#sheet').on('click','.ch_note',function(){ update_modal($(this),ch_var) });
+  $('.close_modal').click(function(){ $('#modal_wrap').hide(); });
+  $(window).scroll(function(){
+    var top = $(window).scrollTop();
+    if(top>500) { $('.top-jump').show(); }
+    else { $('.top-jump').hide(); }
+  });
+  
+  //------------------------------------------------------
+  //  PRIMARY
+  //------------------------------------------------------
+  function gen_character(pt_val,trait_num,req_level,req_c,req_r) {
+    var character = {};
+    var trait_sel = gen_trait_index(trait_num);
+    var trait_name = gen_trait_name(trait_sel);
+    var as = ["str","dex","con","int","wis","cha"];
+    var valid = 0;  
+    var base = [];
+    var race = [];
+    var alignment;
+    var alignment_num;
+    var school;
+    var class_name;
+    
+    //process
+    if((req_r!='any race')&&req_c=='any class') {
+      race.push(req_r);
+      base = gen_base(race,1,'race');
+      base = normalize(base,trait_sel,pt_val,race);
+      if(base) {} else { return false; }
+      class_name = gen_class(base);
+      if(class_name!=req_c&&req_c!='any class') { return false; }
+      alignment_num = gen_alignment(trait_name,race);
+      alignment = align_conv_num(alignment_num);
+      school = gen_school(trait_name,alignment,base,class_name);
+    } else if((req_r=='any race')&&(req_c!='any class')) {
+      class_name = req_c;
+      var class_name_arr = [class_name];
+      base = gen_base(class_name_arr,1,'class');
+      race = gen_race(base);
+      if(race != req_r&&req_r != 'any race') { return false; }      
+      base = normalize(base,trait_sel,pt_val,race);
+      if(base) {} else { return false; }
+      alignment_num = gen_alignment(trait_name,race);
+      alignment = align_conv_num(alignment_num);
+      school = gen_school(trait_name,alignment,base,class_name);  
+    } else if((req_r!='any race')&&(req_c!='any class')) {
+      race.push(req_r);
+      class_name = req_c;
+      var class_name_arr = [class_name];
+      base = gen_base(class_name_arr,1,'class');
+      base = normalize(base,trait_sel,pt_val,race);
+      if(base) {} else { return false; }
+      alignment_num = gen_alignment(trait_name,race);
+      alignment = align_conv_num(alignment_num);
+      school = gen_school(trait_name,alignment,base,class_name);        
+    }
+    else {
+      base = gen_base(trait_name,trait_num,'trait');
+      race = gen_race(base);
+      if(race != req_r&&req_r != 'any race') { return false; }
+      base = normalize(base,trait_sel,pt_val,race);
+      if(base) {} else { return false; }
+	    class_name = gen_class(base);
+      if(class_name != req_c&&req_c != 'any class') { return false; }
+	    alignment_num = gen_alignment(trait_name,race);
+	    alignment = align_conv_num(alignment_num);
+	    school = gen_school(trait_name,alignment,base,class_name);
+	}
+	
+	if(base&&race&&class_name&&alignment) { valid=1; }
+	
+	if(valid) {
+	  var ci = get_index(class_name,"class");
+      var ri = get_index(race,"race");
+	  var mod = [];
+      character.ci = ci;
+      character.ri = ri;
+      character.ti = trait_sel;
+      character.race = race;
+      character.traits = trait_name; 
+      character.ability_scores = base;
+      character.level = req_level;
+      for(var i=0;i<6;i++) { mod.push(get_mod(base[i])); }
+      character.mod = mod;
+      character.class_name = class_name;
+      character.bab = gen_stat(ri,ci,"bab",mod,req_level);
+      character.bab[0].value = Math.floor(req_level*character.bab[0].value);
+      character.hp = gen_stat(ri,ci,"hp",req_level);
+      character.hp[0].value = obj_class[ci].class.hd + mod[2];
+      if(req_level>1) { character.hp[0].value += (req_level-1)*(((0.5*obj_class[ci].class.hd)+1)+mod[2]); }
+	  character.alignment = alignment;
+	  character.fort = gen_stat(ri,ci,"fort",mod,req_level); 
+      character.fort[0].value += mod[2];
+      character.ref = gen_stat(ri,ci,"ref",mod,req_level);
+      character.ref[0].value += mod[1];
+	  character.will = gen_stat(ri,ci,"will",mod,req_level); 
+      character.will[0].value += mod[4];
+	  character.cmb = gen_stat(ri,ci,"cmb",mod,req_level);
+      character.cmb[0].value = Math.floor(character.cmb[0].value+character.bab[0].value+character.mod[0]);
+      character.cmd = gen_stat(ri,ci,"cmd",mod,req_level);
+      character.cmd[0].value = 10 + Math.floor(character.cmd[0].value+character.bab[0].value+character.mod[0]+character.mod[1]);
+      character.init = gen_stat(ri,ci,"init",mod,req_level);
+      character.init[0].value = character.init[0].value+mod[1];
+      character.ac = gen_stat(ri,ci,"ac",mod,req_level);
+      character.ac_flat = gen_stat(ri,ci,"ac_flat",mod,req_level);
+      character.ac_touch = gen_stat(ri,ci,"ac_touch",mod,req_level);    
+      character.ac[0].value += 10+mod[1];
+      character.ac_flat[0].value += 10;
+      character.ac_touch[0].value += 10+mod[1];    
+      character.skills = gen_skills(ri,ci,mod,req_level);
+      character.proficiency_w = get_prof(race,ci,"w");
+      character.proficiency_a = get_prof(race,ci,"a");
+      character.need_skill = need_skill(ci,req_level,mod);
+      character.need_feat = need_feat(ci,race,req_level);
+      character.class_skills = class_skill(ci);
+      character.bonus_feat = bonus_feat(ci,1);
+  	  if(school) { character.school = school; }
+  	  character.spells = apply_race("","spells",race);
+      character.powers = gen_powers(ri,ci,req_level);
+      character.aux = gen_aux(ri,ci,mod,req_level);
+      character.notes = gen_notes(ri,ci,req_level,character);
+      characters.push(character);
+      return character;
+    } else {
+      return false;
+    }
+  } 
+  
+  //------------------------------------------------------
+  //  RNG / MATH
+  //------------------------------------------------------
+  function rng_mod(type,arr_length,trait_mod,max_trait) {
+    if(type == "trait_gen") {
+      return rng(arr_length,1,"dstep");
+    }
+    else if(type == "zero_min") {
+      return rng(arr_length,0,"dstep");
+    }
+    else if(type == "stat_gen") {
+      if(trait_mod == "0") {
+        return rng((0.8/max_trait),(0.85/max_trait),"minmax");
+      } else if(trait_mod == "1") {
+        return rng((0.8/max_trait),(1.0/max_trait),"minmax");
+      } else if(trait_mod == "2") {
+        return rng((1.0/max_trait),(1.4/max_trait),"minmax");
+      } else if(trait_mod == "3") {
+        return rng((1.7/max_trait),(1.9/max_trait),"minmax");
+      } else if(trait_mod == "4") {
+        return rng((1.85/max_trait),(1.9/max_trait),"minmax");
+      }
+    }
+  }
+
+  function rng(min,max,type) {
+    if(type=="minmax"){return (Math.random()*(max-min)+min);}
+    //min=step,max=base
+    else if(type=="dstep"){
+      return (Math.floor(Math.random()*min)+max);
+    }
+  }
+  
+  function sort_number(a,b) {
+    return a - b;
+  }
+
+  //------------------------------------------------------
+  //  GENERATION
+  //------------------------------------------------------
+  
+  function gen_trait_index(max) {
+    //gen rng nums
+    var i = 0;
+    var trait_sel = [];
+    var tl_len = obj_trait.length;
+    while(i<max) {
+      var r = rng_mod("trait_gen",tl_len-1);
+      if(trait_sel.indexOf(r) == -1) {
+        trait_sel.push(r);
+        i++;
+      }
+    }
+    return trait_sel;
+  }
+
+  function gen_trait_name(trait_sel) { 
+    //replace w text vals
+    var ts_len = trait_sel.length;
+    var trait_name = [];
+    for(var i=0;i<ts_len;i++) {
+      trait_name.push(trait_sel[i]);
+    } 
+    for(var i=0;i<ts_len;i++) {
+      trait_name[i] = obj_trait[trait_sel[i]].trait.name;    
+    }
+    //list of text vals
+    return trait_name;
+  }
+
+  function gen_base(arr,max,type) {
+    var arr_len = arr.length;
+    var ol_len;
+    if(type=='trait') { ol_len = obj_trait.length; }
+    else if(type=='race') { ol_len = obj_race.length; }
+    else if(type=='class') { ol_len = obj_class.length; }
+    var base = [];
+    var mod = [0,0,0,0,0,0];
+    for(var i=0;i<arr_len;i++) {
+      for(var j=0;j<ol_len;j++) {
+        if((type=='trait')&&(arr[i] == obj_trait[j].trait.name)) {
+          for(var k=0;k<6;k++) {
+            var letter = obj_trait[j].trait.ability_scores[k].value;
+            mod[k] += rng_mod("stat_gen",1,letter,max);
+          }
+        }
+        else if((type=='race')&&(arr[i] == obj_race[j].race.name)) {
+          for(var k=0;k<6;k++) {
+            var letter = obj_race[j].race.ability_scores[k].value;
+            mod[k] += rng_mod("stat_gen",1,letter,max);
+          }          
+        }
+        else if((type=='class')&&(arr[i] == obj_class[j].class.name)) {
+          for(var k=0;k<6;k++) {
+            var letter = obj_class[j].class.ability_scores[k].value;
+            mod[k] += rng_mod("stat_gen",1,letter,max);
+          }          
+        }
+      }
+    }
+    for(var i=0;i<6;i++) {
+      base.push(Math.floor(10*mod[i]));
+    }
+    return base;
+  }
+  
+  function gen_race(base) {
+    var arr_len = 0;
+    var brk = [];
+    var r_len = obj_race.length;
+  
+    for(var i=0;i<r_len;i++) {
+      var r_tot = 0;
+      var mod = [0,0,0,0,0,0];
+      for(var j=0;j<6;j++) {
+        var score_adj = 2;
+        var r_val = obj_race[i].race.ability_scores[j].value;
+        var name = obj_race[i].race.name;
+        var dual = rng_mod("trait_gen",2);
+      
+        if(name.indexOf('half-elf') != -1) {
+          if(dual==1) {
+            if(j==1) { r_val=3; }
+          } else {
+            if(j==4) { r_val=3; }
+          }
+        }
+      
+        if(r_val == 1) {score_adj = 1;}
+        else if(r_val == 3) {score_adj = 10;}
+      
+        if((obj_race[i].race.name.indexOf('human') !== -1)) {score_adj = 3;}
+      
+        var adj_base = Math.pow(base[j], 3);
+        mod[j] = Math.floor(adj_base*score_adj);
+        r_tot += mod[j];
+      }
+      brk.push(r_tot);    
+      arr_len += r_tot;
+    }
+
+    //gen
+    var sel = rng_mod("trait_gen",arr_len);
+    var index = 0;
+    var brk_len = brk.length;
+    var curr = 0;
+    for(var i=0;i<brk_len;i++) {
+      if(sel > curr) {
+        curr += brk[i];
+      } else {
+        index = i;     
+        break;
+      }
+    }
+    return obj_race[index].race.name;
+  }
+  
+  function gen_class(base) {
+  	var c_len = obj_class.length;
+    var out = false;
+    var iter = 0;
+    while(out===false) {
+      if(iter>10) { return false; }
+      var arr_len = 0;
+      var brk = [];
+      for(var i=0;i<c_len;i++) {
+        var c_tot = 0;
+        var mod = [0,0,0,0,0,0];
+        for(var j=0;j<6;j++) {
+          var score_adj = 0.05;
+          var c_val = obj_class[i].class.ability_scores[j].value;
+          var name = obj_class[i].class.name;
+          if(c_val == 1) { score_adj = 0.01; }
+          else if(c_val == 3) { score_adj = 10; }
+          var adj_c = Math.pow(base[j], 3);
+          //var adj_c = 1;
+          mod[j] = Math.floor(adj_c*score_adj);
+          c_tot += mod[j];
+        }
+        brk.push(c_tot);
+        arr_len += c_tot;
+      }
+
+      var sel = rng_mod("trait_gen",arr_len);
+      var index = 0;
+      var brk_len = brk.length;
+      var curr = 0;
+      for(var i=0;i<brk_len;i++) {
+        if(sel > curr) { 
+          curr += brk[i]; 
+        }
+        else { 
+          index = i;
+          break;
+        }
+      }
+
+      var out = obj_class[index].class.name;
+      for(var i=0;i<6;i++) {
+        if((base[i]<13)&&(obj_class[index].class.ability_scores[i].value==3)) {
+            out = false;
+        }
+      }
+    iter++;
+    }
+    
+    
+	  return out;
+  }
+  
+  function gen_alignment(trait_name,race) {
+    var arr_len = 0;
+    var brk = [];
+    var tm_len = obj_trait.length;
+    var t_len = trait_name.length;
+    var r_len = obj_race.length;
+    var mod = [0,0];
+    var score_adj;
+    for(var i=0;i<t_len;i++) {
+      score_adj = 2;
+      for(var j=0;j<tm_len;j++) {
+        var tm_name = obj_trait[j].trait.name;
+        if(trait_name[i]==tm_name) {
+          for(var k=0;k<2;k++) {
+            var tma_val = obj_trait[j].trait.alignment[k].value;
+            if(tma_val==3) { score_adj=10; }
+            else if(tma_val==1) { score_adj=1; }
+            mod[k] += score_adj;
+          }
+        }        
+      }
+    }
+    for(var i=0;i<r_len;i++) {
+      score_adj = 2;
+      if(race==obj_race[i].name) {
+        for(var j=0;j<2;j++) {
+          var rma_val = obj_race[i].race.alignment[j].value;
+          if(rma_val==3) { score_adj=10; }
+          else if(rma_val==1) { score_adj=1; }
+          mod[j] +=score_adj
+        }
+      }
+    }
+    for(var i=0;i<2;i++) {
+      mod[i] = Math.round(mod[i]/(t_len+1));
+    }
+    return mod;
+  }
+  
+  function align_conv_num(alignment_num) {
+    var align_l = "N";
+    var align_g = "N";
+    if(alignment_num[0]==1) { align_l="L"; }
+    else if(alignment_num[0]==3) { align_l="C"; }
+    if(alignment_num[1]==1) { align_g="G"; }
+    else if(alignment_num[1]==3) { align_g="E"; }
+    var out = align_l+align_g;
+    if(out=="NN") { out="N"; }
+    return out;
+  }
+  
+  function gen_school(trait_name,alignment,base,class_name) {
+    if(class_name=="cleric") {
+      var d_len = obj_domain.length;
+      var class_i = false;
+      var brk = [];
+      var arr_len = 0;
+      for(var i=0;i<obj_class.length;i++) {
+        if(class_name==obj_class[i].class.name) { class_i = i; }
+      }
+      for(var i=0;i<d_len;i++) {
+        mod = 0;
+        for(var j=0;j<6;j++) {
+          var d_val = obj_domain[i].domain.ability_scores[j].value;
+          var score_adj = 0.05;
+          if(d_val==3) { score_adj = 10; }
+          else if(d_val==1) { score_adj = 0.01; }
+          mod += (Math.pow(obj_class[class_i].class.ability_scores[j].value,3)*score_adj);
+        }
+        for(var j=0;j<5;j++) {
+          var dro_val = obj_domain[i].domain.roles[j].value;
+          var score_adj = 0.05;
+          if(dro_val==3) { score_adj=10; }
+          else if(dro_val==1) {score_adj=0.01; }
+          mod += (Math.pow(obj_class[class_i].class.roles[j].value,3)*score_adj);
+        }
+        for(var j=0;j<2;j++) {
+          var dra_val = obj_domain[i].domain.range[j].value;
+          var score_adj = 0.05;
+          if(dra_val==3) { score_adj=10; }
+          else if(dra_val==1) {score_adj=0.01; }
+          mod += (Math.pow(obj_class[class_i].class.range[j].value,3)*score_adj);
+        }
+        brk.push(mod);
+        arr_len += mod;
+      }
+    
+    var sel = [];
+    var out = [0,0];
+    var index = 0;
+
+    for(var i=0;i<2;i++) {
+      var r = rng_mod("trait_gen",arr_len);
+      sel.push(r);
+      var curr = 0;
+        for(var j=0;j<brk.length;j++) {
+          if(r > curr) { curr += brk[j]; }
+          else {
+            index = j;
+            break;
+          }
+        }
+      out[i]=obj_domain[index].domain.name;
+    }
+    
+    
+    //figure out alignment restrictions
+    if(out[0]==out[1]) {
+      return false;
+    } else {
+      return out;
+    }
+    }
+    else if(class_name=="wizard") {
+      var s_len = obj_school.length;
+      var class_i = false;
+      var brk = [];
+      var arr_len = 0;
+      for(var i=0;i<obj_class.length;i++) {
+        if(class_name==obj_class[i].class.name) { class_i = i; }
+      }
+      for(var i=0;i<s_len;i++) {
+        mod = 0;
+        for(var j=0;j<6;j++) {
+          var s_val = obj_school[i].school.ability_scores[j].value;
+          var score_adj = 0.05;
+          if(s_val==3) { score_adj = 10; }
+          else if(s_val==1) { score_adj = 0.01; }
+          mod += (Math.pow(obj_class[class_i].class.ability_scores[j].value,3)*score_adj);
+        }
+        for(var j=0;j<5;j++) {
+          var sro_val = obj_school[i].school.roles[j].value;
+          var score_adj = 0.05;
+          if(sro_val==3) { score_adj=10; }
+          else if(sro_val==1) {score_adj=0.01; }
+          mod += (Math.pow(obj_class[class_i].class.roles[j].value,3)*score_adj);
+        }
+        for(var j=0;j<2;j++) {
+          var sra_val = obj_school[i].school.range[j].value;
+          var score_adj = 0.05;
+          if(sra_val==3) { score_adj=10; }
+          else if(sra_val==1) {score_adj=0.01; }
+          mod += (Math.pow(obj_class[class_i].class.range[j].value,3)*score_adj);
+        }
+        brk.push(mod);
+        arr_len += mod;
+      }
+    var out = [0];
+    var index = 0;
+    var r = rng_mod("trait_gen",arr_len);
+    var curr = 0;
+      for(var j=0;j<brk.length;j++) {
+        if(r > curr) { curr += brk[j]; }
+        else {
+          index = j;
+          break;
+        }
+      }
+    out[0]=obj_school[index].school.name;
+    return out;
+    }
+    
+    else if(class_name=="sorceror"||class_name=="bloodrager") {
+      var b_len = obj_bloodline.length;
+      var class_i = false;
+      var brk = [];
+      var arr_len = 0;
+      for(var i=0;i<obj_class.length;i++) {
+        if(class_name==obj_class[i].class.name) { class_i = i; }
+      }
+      for(var i=0;i<b_len;i++) {
+        mod = 0;
+        for(var j=0;j<6;j++) {
+          var b_val = obj_bloodline[i].bloodline.ability_scores[j].value;
+          var score_adj = 0.05;
+          if(b_val==3) { score_adj = 10; }
+          else if(b_val==1) { score_adj = 0.01; }
+          mod += (Math.pow(obj_class[class_i].class.ability_scores[j].value,3)*score_adj);
+        }
+        for(var j=0;j<5;j++) {
+          var bro_val = obj_bloodline[i].bloodline.roles[j].value;
+          var score_adj = 0.05;
+          if(bro_val==3) { score_adj=10; }
+          else if(bro_val==1) {score_adj=0.01; }
+          mod += (Math.pow(obj_class[class_i].class.roles[j].value),3*score_adj);
+        }
+        for(var j=0;j<2;j++) {
+          var bra_val = obj_bloodline[i].bloodline.range[j].value;
+          var score_adj = 0.05;
+          if(bra_val==3) { score_adj=10; }
+          else if(bra_val==1) {score_adj=0.01; }
+          mod += (Math.pow(obj_class[class_i].class.range[j].value,3)*score_adj);
+        }
+        brk.push(mod);
+        arr_len += mod;
+      }
+    var out = [0];
+    var index = 0;
+    var r = rng_mod("trait_gen",arr_len);
+    var curr = 0;
+      for(var j=0;j<brk.length;j++) {
+        if(r > curr) { curr += brk[j]; }
+        else {
+          index = j;
+          break;
+        }
+      }
+    out[0]=obj_bloodline[index].bloodline.name;
+    return out;
+    }
+    return 1;
+  }
+  
+  function get_index(item,type) {
+    var out;
+    if(type=="class") {
+      for(var i=0;i<obj_class.length;i++) {
+        if(item==obj_class[i].class.name) { out = i; }
+      }
+    } else if(type=="race") {
+      for(var i=0;i<obj_race.length;i++) {
+        if(item==obj_race[i].race.name) { out = i; }
+      }
+    }
+    return out;
+  }
+  
+  function gen_stat(ri,ci,type,mod,level) {
+//console.log('gen stat hit for type '+type);
+    var value_race = new Array();
+    var value_class = new Array();    
+    var out = [{"type":"total","value":0,"note":0},{"type":"race","value":value_race,"note":0},{"type":"class","value":value_class,"note":0}];
+    
+    var typelist = ["feature","speed"];
+    
+    //race
+    for(var i=0;i<obj_race[ri].race.mechanics.length;i++) {
+      var valid = 0;
+      for(var j=0;j<typelist.length;j++) {
+        if(obj_race[ri].race.mechanics[i].type == typelist[j]) { valid = 1; }
+      }
+      
+      if(valid == 1 && obj_race[ri].race.mechanics[i].result) {
+        for(var j=0;j<obj_race[ri].race.mechanics[i].result.length;j++) {
+          var rvar = obj_race[ri].race.mechanics[i].result[j];
+          if(rvar.type=='stat_inc' && rvar.stat_type==type) {
+            
+            //here is where we adjust to push method
+            var value_adjust = rvar.value;
+            var name = obj_race[ri].race.mechanics[i].name;
+            if(rvar.stat) { value_adjust = mod[rvar.stat]; }
+            if(rvar.note) {
+              out[1].note = 1;
+              value_race.push( {"type":rvar.type,"note":1,"text":rvar.text,"value":value_adjust,"name":name} );
+              out[1].value = value_race;
+            }
+            else {
+              value_race.push( {"type":rvar.type,"note":0,"text":rvar.text,"value":value_adjust,"name":name} );
+            }
+          }
+        }
+      }
+    }
+    
+    //class
+    for(var i=0;i<obj_class[ci].class.mechanics.length;i++) {
+      var valid = 0;
+      for(var j=0;j<typelist.length;j++) {
+        if(obj_class[ci].class.mechanics[i].type == typelist[j]) { valid = 1; }
+      }
+      if(valid == 1 && obj_class[ci].class.mechanics[i].result) {
+        for(var j=0;j<obj_class[ci].class.mechanics[i].result.length;j++) {
+          var rvar = obj_class[ci].class.mechanics[i].result[j];
+          var name = obj_class[ci].class.mechanics[i].name;
+          if(rvar.type=='stat_inc' && rvar.stat_type==type) {
+//            if(type=='bab') { console.log('rvar'); console.log(rvar); }
+            var value_adjust = 0;
+            if(rvar.value||rvar.value===0) {
+              //bard/ranger +1/2 class min 1 on knowledge
+              if(rvar.value==0.5) {
+                value_adjust = Math.floor(0.5*(level));
+                if(value_adjust<1) { value_adjust = 1; }
+              } 
+              
+              else if(type=='fort'||type=='ref'||type=='will') {
+                if(rvar.value==0) { value_adjust = Math.floor(level*(1/3)); }
+                else if(rvar.value==1) { value_adjust = 2 + Math.floor(level*(1/2)); }
+              }
+                             
+              else {
+                value_adjust = parseFloat(rvar.value);
+              }
+            }
+            else if(rvar.stat) { value_adjust = parseFloat(mod[rvar.stat]); }
+//            if(type=='bab') { console.log('out[2].value post-val-adj -- '+out[2].value); }
+            if(rvar.note) {
+                out[2].note = 1;
+                value_class.push( {"type":rvar.type,"note":1,"text":rvar.text,"value":value_adjust,"name":name} );
+                out[2].value = value_class;
+            }
+            else {
+              value_class.push( {"type":rvar.type,"note":0,"text":rvar.text,"value":value_adjust,"name":name} );
+            }
+          }
+        }
+      }      
+    }
+    
+    //total
+    var total = 0;
+    for(var i=1;i<out.length;i++) {
+      if(out[i].value.length==0) { 
+//        console.log('out['+i+'].val.len==0');
+        out[i].value.push({"value":0}); }
+      for(var j=0;j<out[i].value.length;j++) {
+        if(out[i].value[j].note == 1) { }
+        else { total += parseFloat(out[i].value[j].value);
+//              console.log('total -- '+total);
+//              console.log('out['+i+'].value['+j+'].value -- '+out[i].value[j].value);
+             }
+      }
+    }
+    out[0].value = total;
+    if(type=='bab') {
+//      console.log('out in total');
+//      console.log(out);
+//      console.log('out[1].val[0].val -- ' + out[1].value[0].value);
+    }
+    return out;
+  }
+
+  function gen_skills(ri,ci,mod,lvl) {
+    var out = [];
+    for(var i=0;i<obj_skill.length;i++) {
+      out.push({ "name":obj_skill[i].skill.name,"set":gen_stat(ri,ci,obj_skill[i].skill.name,mod,lvl)});
+    }
+    for(var i=0;i<out.length;i++) {
+      for(var j=0;j<obj_skill.length;j++) {
+        if(out[i].name==obj_skill[j].skill.name) {
+          out[i].set[0].value += mod[obj_skill[j].skill.stat];
+        }
+      }
+    }
+    return out;
+  }
+  
+  function total(item) {
+    var out = 0;
+    for(var i=0;i<item.length;i++) {
+      if(item[i].note) {}
+      else { out += parseFloat(item[i].value); }
+    }
+    return out;
+  }
+  
+  function gen_notes(ri,ci,lvl,character) {
+    var out = [];
+    //skills,saves,ac
+    for(var i=0;i<character.skills.length;i++) {
+      //if total, if class, if race
+      for(var j=0;j<character.skills[i].set.length;j++) {
+if(character.skills[i].set[j].note) {
+  out.push({"type":"skill","name":character.skills[i].name,"loc":j,"text":character.skills[i].set[j].text}); }
+      }
+    }
+    return out;
+  }
+  
+  function gen_aux(ri,ci,mod,lvl) {
+    var out = [];
+    var speed = gen_stat(ri,ci,"speed",mod,lvl);
+    var size;
+    var vision;
+    //add racial types/subtypes
+    out.push({"type":"speed","value":speed[0].value+" ft."});
+    for(var i=0;i<obj_race[ri].race.mechanics.length;i++) {
+      if(obj_race[ri].race.mechanics[i].type=="size") { size = {"type":"size","value":obj_race[ri].race.mechanics[i].value}; }
+      if(obj_race[ri].race.mechanics[i].type=="vision") { vision = {"type":"vision","value":obj_race[ri].race.mechanics[i].name + " (" + obj_race[ri].race.mechanics[i].value + " ft.)"}; }
+    }
+    out.push(size,vision);
+    return out;
+  }
+  
+  function gen_powers(ri,ci,lvl) {
+    var out = [];
+    var rvar = obj_class[ci].class.mechanics;    
+    for(var i=0;i<rvar.length;i++) {      
+      if(rvar[i].type=='proficiency_wg'||rvar[i].type=='proficiency_ag'||rvar[i].type=='proficiency_w'||rvar[i].type=='proficiency_a') {}
+      else { 
+        if(rvar[i].level<=lvl) {
+          if(rvar[i].result) {
+            for(var j=0;j<rvar[i].result.length;j++) {
+              if(rvar[i].result[j].type=="power"&&rvar[i].result[j].level<=lvl) {
+                out.push({"name":rvar[i].result[j].name,"text":rvar[i].result[j].text,"link":rvar[i].result[j].link,"child":1,"power_type":rvar[i].result[j].power_type});
+              }
+              //***
+              //bonus feat parsing here maybe?
+            }
+          }
+          else {
+            out.push({"name":rvar[i].name,"text":rvar[i].text,"link":rvar[i].link,"power_type":rvar[i].power_type});
+
+          }           
+        }
+      }
+    }
+    return out;
+  }
+    
+  function need_skill(ci,lvl,mod) {
+    var s_need = lvl*(obj_class[ci].class.l_skills+mod[3]);
+    return s_need;
+  }
+  
+  function class_skill(ci) {
+    var arr = [];
+    var c_skill = obj_class[ci].class.c_skills
+    var csl = c_skill.length;
+    for(var i=0;i<csl;i++) {
+      arr.push(c_skill[i]);
+    }
+    return arr;
+  }
+  
+  function need_feat(ci,race,lvl) {
+    var f_c = 0;
+    var m_l = obj_class[ci].class.mechanics.length;
+    for(var i=0;i<m_l;i++) {
+      var curr = obj_class[ci].class.mechanics[i];
+        if(curr.type=='feature'&&curr.result) {
+          for(var j=0;j<curr.result.length;j++) {
+            if(curr.result[j].type=='bonus_feat'&&curr.result[j].rng==1) { f_c++; }
+          }
+        }
+      }
+    if(race=='human') { f_c++; }
+    for(var i=1;i<=lvl;i++) { if(i%2) { f_c++; } }
+    return f_c;
+  }
+  
+  function bonus_feat(ci,lvl) {
+    var f_l = [];
+    var m_l = obj_class[ci].class.mechanics.length;
+    for(var i=0;i<m_l;i++) {
+      var curr = obj_class[ci].class.mechanics[i];
+      if(curr.type=='feature'&&curr.result) {
+        for(var j=0;j<curr.result.length;j++) {
+          if(curr.result[j].type=='bonus_feat') {
+            if(curr.result[j].name) { f_l.push(curr.result[j].name); }
+          }
+        }
+      }
+    }
+    return f_l;
+  }
+  
+  function get_prof(race,ci,type) {
+  var out = [];
+  var rloc = obj_race;
+  var cloc = obj_class;
+  var rlen = rloc.length;
+  var clen = cloc.length;
+  var cm = cloc[ci].class.mechanics;
+  var ri = 0;
+  for(var i=0;i<rlen;i++) { if(race == rloc[i].name) { ri = i; } }
+  var rm = rloc[ri].race.mechanics;
+  for(var i=0;i<cm.length;i++) {
+    var cmt = cm[i].type; if(cmt=='proficiency_w'||cmt=='proficiency_wg'||cmt=='proficiency_a'||cmt=='proficiency_ag') {
+
+
+      for(var j=0;j<cm[i].name.length;j++) {
+        if((type=='w')&&(cmt=='proficiency_w'||cmt=='proficiency_wg')) {
+          out.push(cm[i].name[j]);
+        }
+        else if((type=='a')&&(cmt=='proficiency_a'||cmt=='proficiency_ag')) {
+          out.push(cm[i].name[j]);
+        }
+      }
+    }
+  }
+  
+  for(var i=0;i<rm.length;i++) {
+    var rmt = rm[i].type;
+    if(rmt=='proficiency_w'||rmt=='proficiency_wg'||rmt=='proficiency_a'||rmt=='proficiency_ag') {
+    for(var j=0;j<rm[i].name.length;j++) {
+      if((type=='w')&&(rmt=='proficiency_w'||rmt=='proficiency_wg')) {
+          out.push(rm[i].name[j]);
+        }
+      else if((type=='a')&&(rmt=='proficiency_a'||rmt=='proficiency_ag')) {
+        out.push(rm[i].name[j]);
+      }
+    }  
+  }
+}
+  
+return out;
+}
+  
+  function apply_race(arr,type,race) {
+    var out;
+    if(arr == "") { out = []; }
+    else { out = arr; }
+    var ri;
+    for(var i=0;i<obj_race.length;i++) {
+      if(race==obj_race[i].race.name) { ri = i; }
+    }
+      var rrvar = obj_race[ri].race;
+      for(var i=0;i<rrvar.mechanics.length;i++) {
+        if(rrvar.mechanics[i].type=='feature') {
+          var r3var = 0;
+          if(rrvar.mechanics[i].result) { r3var = rrvar.mechanics[i].result; }
+          for(var j=0;j<r3var.length;j++) {
+            if(r3var[j].type=='spell') {
+              out.push(r3var[j].name); 
+            }
+          }         
+        }
+      }    
+    return out;
+  }
+  
+  function get_mod(score) {
+    var mod = Math.floor((score-10)/2);    
+    return mod;
+  }
+	  
+
+  //------------------------------------------------------
+  //  PT MOD / VALS
+  //------------------------------------------------------
+
+  function gen_pt_mod(num) {
+    var mod = -2;
+    if(num==9) {mod=-1;}
+    else if(num==10) {mod=0;}
+    else if(num==11) {mod=1;}
+    else if(num==12) {mod=2;}
+    else if(num==13) {mod=3;}
+    else if(num==14) {mod=5;}
+    else if(num==15) {mod=7;}
+    else if(num==16) {mod=10;}
+    else if(num==17) {mod=13;}
+    else if(num==18) {mod=17;}
+    return mod;
+  }
+  
+  function gen_pt_val(base_f,pt_val) {
+    var pt_tot = 0;
+    for(i=0;i<6;i++) { pt_tot += gen_pt_mod(base_f[i]); }
+    var out = (pt_val-pt_tot);
+    return out;
+  }
+  
+  function get_dir(number) {
+    var out = number;
+    if(number >= 0) { out='+'+number; }
+    return out;
+  }
+  
+  //------------------------------------------------------
+  //  NORMALIZE
+  //------------------------------------------------------
+  
+function normalize(base,trait_sel,pt_val,race) {
+  var ri = get_index(race,"race");
+  var base_f = base;
+  var heo = false;
+  var avg = [0,0,0,0,0,0];
+  var race_arr = [0,0,0,0,0,0];
+  var race_avg = []; 
+  var tslen = trait_sel.length;
+  var iter = 0;
+  
+  //gen averages
+  for(var i=0;i<tslen;i++) {
+    for(var j=0;j<6;j++) {
+      avg[j] += obj_trait[trait_sel[i]].trait.ability_scores[j].value;
+    }
+  }
+  
+  //determine heo
+  if((ri==9)||(ri==10)||(ri==13)) { heo = rng_mod("zero_min",6,1); }
+  
+  //swap in actual values and calculate real averages
+  for(var i=0;i<6;i++) {
+    var race_val = obj_race[ri].race.ability_scores[i].value;
+    race_avg.push(race_val);
+    if(race_val===1) { race_arr[i]=-2; }
+    else if(race_val===2) { race_arr[i]=0; }
+    else if(race_val===3) { race_arr[i]=2; }      
+    else if(race_val===4) { race_arr[i]=4; }
+    if(i===heo) { 
+      race_arr[i]=2; 
+      race_avg[i] = 3;
+    }
+    avg[i] += race_avg[i];
+    avg[i] = Math.ceil(avg[i] / (tslen+1));
+  }
+  
+  //immediately correct any errors
+  for(var i=0;i<6;i++) {
+    if((base_f[i]+race_arr[i])>18) { base_f[i] -= Math.abs(race_arr[i]); }
+    if((base_f[i]+race_arr[i])<8) { base_f[i] += Math.abs(race_arr[i]); }
+  }
+  var diff = gen_pt_val(base_f,pt_val);
+  //console.log("=============");
+  //console.log("START "+base_f+" DIFF "+diff);
+
+  while(diff != 0) {
+    //console.log("------------------");
+    if(iter>10) { return false; }
+        
+    var mag = 0;  
+    var arr1 = [1,1,1,1,1,1];
+    var arr2 = [1,1,1,1,1,1];
+    var arr3 = [1,1,1,1,1,1];
+    var arr4 = [1,1,1,1,1,1];
+    var arr5 = [1,1,1,1,1,1];
+    var arr6 = [1,1,1,1,1,1];
+    if(diff>0) {
+      arr1 = [0,0,0,0,0,0];
+      arr2 = [0,0,0,0,0,0];
+      arr3 = [0,0,0,0,0,0];
+    } else {
+      arr4 = [0,0,0,0,0,0];
+      arr5 = [0,0,0,0,0,0];
+      arr6 = [0,0,0,0,0,0];
+    }
+    var main = [arr1,arr2,arr3,arr4,arr5,arr6];
+
+  
+    //establish racial totals
+    var base_fr = [0,0,0,0,0,0];
+    for(var i=0;i<6;i++) {
+      base_fr[i] = base_f[i]+race_arr[i];
+    }
+    //console.log('BASE_FR = '+base_fr);
+    
+    //set up 2d array
+    for(var i=0;i<6;i++) {
+      var curr = main[i];
+      var rng = false;
+            
+      for(var j=0;j<6;j++) {
+        //set restricted locations by removing probability
+        if(base_fr[j]>=18) { if(diff>0) { curr[j]=0; } }
+        else if(base_fr[j]<=8) { if(diff<0) { curr[j]=0; } }
+        
+        //diff logic
+        if(curr[j] != 0) {
+          if(diff>10) {
+            mag = 3;
+            if(avg[j]>=3) { curr[j]=3; }
+            else { curr[j]=2; }
+          }
+          else if(diff>5&&diff<=10) {
+            mag = 2;
+            if(race_avg>=3) { curr[j]=3; }
+            else { curr[j]=2; }
+          }
+          else if(diff>0&&diff<=5) {
+            mag = 1;
+            if(base_fr[j]==13) { curr[j]=3; }
+            else if((base_fr[j]==11)||(base_fr[j]==9)) { curr[j]=4; }
+            else { curr[j]=2; }
+          }
+          else if(diff<0&&diff>=-5) {
+            mag = -1;
+            if(avg[j]>=3) { curr[j]=1; }
+            else if(base_fr[j]==13) { curr[j]=3; }
+            else if((base_fr[j]==11)||(base_fr[j]==9)) { curr[j]=4; }
+            else { curr[j]=2; }
+          }
+          else if(diff<-5&&diff>=-10) {
+           mag = -2;
+           if(base_fr[j]>13) { curr[j]=3; }
+           else {curr[j]=2; }
+          }
+          else if(diff<-10) {
+            mag = -3;
+            if(avg[j]>=3) { curr[j]=1; }
+            else { curr[j]=2; }
+          }
+          
+          if((base_fr[j]+mag>18)||(base_fr[j]+mag<8)) { curr[j] = 0; }
+        }
+        
+      }
+      main[i]=curr;
+      //console.log(main[i]);
+    }
+    
+    //calculate probability arrays
+    var total = 0;
+    var arr_p1 = [0,0,0,0,0,0];
+    var arr_p2 = [0,0,0,0,0,0];
+    var arr_p3 = [0,0,0,0,0,0];
+    var arr_p4 = [0,0,0,0,0,0];
+    var arr_p5 = [0,0,0,0,0,0];
+    var arr_p6 = [0,0,0,0,0,0];          
+
+    var main_p = [arr_p1,arr_p2,arr_p3,arr_p4,arr_p5,arr_p6];
+    var prob = [];
+    for(var i=0;i<6;i++) {
+      var curr_p = main_p[i];
+      var currt = main[i];
+      for(var j=0;j<6;j++) {
+        curr_p[j] = Math.pow(currt[j],4);
+        total += curr_p[j];
+        prob.push(curr_p[j]);
+      }
+      main_p[i] = curr_p;
+    }
+    //console.log("PROB "+prob);
+    //determine course of action via probability array
+    var local = 0;
+    var brk = 0;
+    var rng = rng_mod("zero_min",total,1);
+    //console.log("RNG "+rng+" TOTAL "+total);
+    //ending on curr 0 stat creating sub-8/post-20 stats
+    for(var i=0;i<prob.length;i++) {
+      //local is breaching rng but cant surpass the next, but the next is beyond a 0-zone: can go past 2 2 1 2 0 0 but not the next 2 so it drops to 0, a restricted
+      //need to backtrack
+      if((rng>local)&&(i!=(prob.length-1))) {
+        local += prob[i];
+      }
+      else {
+        //console.log("INITIAL STOP AT "+i+" WITH PROB "+prob[i]);
+        brk = i;
+        break;
+      }
+    }
+    for(var i=brk;i>=0;i--) {
+      if(prob[i]===0) {}
+      else {
+        //console.log("STOPPED AT "+i+" WITH PROB "+prob[i]);
+        brk = i;
+        break;
+      }
+    }
+    var cat = Math.floor(brk/6);
+    //***replacement for mag, which disrespected the 2d array- testing
+    var mag2 = cat-3;
+    if(mag2>=0) { mag2 =  (cat-2); }
+    var stat = brk-(6*cat);
+    base_f[stat] += mag2;
+    diff = gen_pt_val(base_f,pt_val);
+    iter++;
+    //console.log("BASE_F["+stat+"] = "+base_f+" DIFF "+diff+" MAG "+mag+" MAG2 "+mag2+" CAT "+cat);
+    //console.log("------------------");
+  }
+  //console.log(race_arr);
+  for(var i=0;i<6;i++) {
+    base_f[i] += race_arr[i];
+  }
+  //console.log("FINAL "+base_f);
+  return base_f;
+}
+  
+  //------------------------------------------------------
+  //  CONSTRUCTION
+  //------------------------------------------------------   
+  
+    function construct_character(character) {
+      var score_type = ["str","dex","con","int","wis","cha"];
+      console.log(character);      
+      
+      //resets
+      $('#stats_wrap table, #skills_wrap table, #powers_wrap .powers-actual').html('');
+      
+      //stats
+      $('#stats_wrap table').html('<tr><th class="stat"></th><th class="stat_tot">Total</th><th class="stat_mod">Mod</th></tr>');
+    for(var i=0;i<character.ability_scores.length;i++) {
+      var dir = "";
+      if(get_mod(character.ability_scores[i])>0) { dir = "+"; }
+      var score = character.ability_scores[i];
+      $('#stats_wrap table').append('<tr class="score"><td class="type">'+score_type[i]+'</td><td class="value"><u class="pencil-big">'+score+'</u></td><td class="mod"><u class="pencil-big">'+get_dir(get_mod(character.ability_scores[i]))+'</u></td></tr>');
+    }
+      
+      //skills
+      $('#skills_wrap table').html('<tr><th>Class Skill</th><th class="skill">Skill</th><th class="table-total">Total</th><th class="table-race">Racial Mod</th><th class="table-class">Class Mod</th></tr>');
+      var cs = character.class_skills;         
+    for(var i=0;i<character.skills.length;i++) {
+      var img = '<td class="img"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/333520/box.png" />';
+      var star = "";
+      if(obj_skill[i].skill.trained==1) { star = '*'; }
+      var ind_name = character.skills[i].name;
+      var name = '<td class="name">'+character.skills[i].name+star+'</td>';
+      var total = '<td class="table-total"><u>'+get_dir(character.skills[i].set[0].value)+'</u></td>';
+      var s_race = '<td class="table-race"><u>'+character.skills[i].set[1].value+'</u></td>';
+      var s_class = '<td class="table-class"><u>'+character.skills[i].set[2].value+'</u></td>';
+      if(cs.indexOf(ind_name)!=-1) { img = '<td class="img"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/333520/box_tick.png" />'; }
+      img += "</td>";
+      $('#skills_wrap table').append('<tr class="score" id="sk_'+i+'">'+img+name+total+s_race+s_class+'</tr>');
+    }
+      
+      //defense
+      $('#defense_wrap #fort').html('<span>Fortitude '+render_val(character.fort)+'</span>');
+      $('#defense_wrap #ref').html('<span>Reflex '+render_val(character.ref)+'</span>');
+      $('#defense_wrap #will').html('<span>Will '+render_val(character.will)+'</span>');
+      $('#defense_wrap #ac').html('<span>AC '+render_val(character.ac,1)+'</span>');
+      $('#defense_wrap #ac_flat').html('<span>Flat-footed AC '+render_val(character.ac_flat,1)+'</span>');
+      $('#defense_wrap #ac_touch').html('<span>Touch AC '+render_val(character.ac_touch,1)+'</span>');  
+      $('#defense_wrap #cmd').html('<span>CMD '+render_val(character.cmd,1)+'</span>');
+      
+      //offense
+      $('#offense_wrap #cmb').html('<span>CMB '+render_val(character.cmb)+'</span>');
+      $('#offense_wrap #bab').html('<span>BAB '+render_val(character.bab)+'</span>');
+      
+      //general
+      var arcl_1 = '<h3><u>'+character.alignment+' '+character.race+' '+character.class_name+' ('+character.level+')</u></h3>';
+      var arcl_2 = '';
+      if(character.school) {
+        arcl_2 = '<h4>';
+        for(var i=0;i<character.school.length;i++) {
+          var school = character.school[i];
+          arcl_2 += school;
+          if(i!=character.school.length-1) { arcl_2 += ', '; }
+        }
+        arcl_2 += '</h4>';
+      }
+      var arcl_3 = '';
+      for(var i=0;i<character.traits.length;i++) {
+        var trait = character.traits[i]
+        arcl_3 += trait;
+        if(i!=character.traits.length-1) { arcl_3 += ', '; }
+      }
+      var arcl_4 = '<h4>'+character.hp[0].value+' HP';
+      var arcl_5 = '<h4>Initiative '+get_dir(character.init[0].value)+'</h4>';
+      
+      var arcl_html = arcl_1 + arcl_2 + arcl_3 + arcl_4 + arcl_5;
+      $('#general_wrap .general').html(arcl_html);
+      $('#storage_wrap .save').show();
+    
+      //powers
+      $('#powers_wrap #proficiency-a').html('<span>Armor proficiencies: '+character.proficiency_a.join(', ')+'</span>');
+      $('#powers_wrap #proficiency-w').html('<span>Weapon proficiencies: '+character.proficiency_w.join(', ')+'</span>');
+      $('#powers_wrap #speed').html('<span>Speed: '+character.aux[0].value+'</span>');
+      $('#powers_wrap #size').html('<span>Size: '+character.aux[1].value+'</span>');
+      $('#powers_wrap #vision').html('<span>Vision: '+character.aux[2].value+'</span>');
+      for(var i=0;i<character.powers.length;i++) {
+        $('#powers_wrap .powers-actual').append('<div class="row"><span><b>'+character.powers[i].name+' ('+character.powers[i].power_type+') -- (<a href="'+character.powers[i].link+'">link</a>)</span></div>');
+      }
+
+      //quality
+      var q_max = 0;
+      var q_min = 0;
+      var q_tot = 0;
+      for(var i=0;i<character.ability_scores.length;i++) {
+        var trait_tot = 0;
+        for(var j=0;j<character.ti.length;j++) {
+          trait_tot += (obj_trait[character.ti[j]].trait.ability_scores[i].value * character.ability_scores[i]);
+        }
+        q_tot += (obj_class[character.ci].class.ability_scores[i].value*character.ability_scores[i]) + (obj_race[character.ri].race.ability_scores[i].value*character.ability_scores[i]) + trait_tot;
+        q_max += 3 * (5 * character.ability_scores[i]);
+        q_min += (3 * character.ability_scores[i]);
+      }
+      var adjusted = 4 * (((q_tot-q_min)/(q_max-q_min)) - 0.45);
+      var sat = Math.ceil(100*adjusted);
+      var light = Math.ceil(50*adjusted);
+      $('#quality_wrap').css('border-top','10px solid hsl('+100+',100%,'+light+'%)').css('width',''+sat+'%');
+    }
+    
+    function render_val(arr,no_dir) {
+      // console.log('RENDER');
+      // console.log(arr);
+      var out;
+      if(no_dir) { out = arr[0].value; }
+      else { out = get_dir(arr[0].value); }
+      
+      for(var i=1;i<arr.length;i++) {
+        if(arr[i].note==1) {
+          for(var j=0;j<arr[i].value.length;j++) {
+            if(arr[i].value[j].note==1) {
+              if(no_dir) {
+                out = "<a class='ch_note'>"+arr[0].value+"</a>";
+              } else {
+              out = "<a class='ch_note'>"+get_dir(arr[0].value)+"</a>";                
+              }
+            }
+          }
+        }
+      }
+      return out;
+    }
+    
+  function update_modal(ref) {
+    var id = $(ref).closest('.ch_obj').attr('id');
+    var out = '';
+    $('.modal').html('');
+    for(var i=1;i<ch_var[id].length;i++) {
+      for(var j=0; j<ch_var[id][i].value.length;j++) {
+        var text = ch_var[id][i].value[j].text;
+        var name = ch_var[id][i].value[j].name;
+        if(text) {
+          out += '<p><b>'+name+':</b> '+text+'</p>';          
+        }
+      }
+    }
+    $('.modal').append(out);
+    $('#modal_wrap').show();
+    console.log(out);
+  }
+  
+});
