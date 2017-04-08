@@ -6,7 +6,7 @@ All core/featured/uncommon races are in
 Normalize fn has been updated- works i think, there's a bit of a ghost in the machine there
 Leveling has partial support
 
-NEXT current: finish ui upgrade
+CURRENT: feats are underway (data entry and structural determination.) Need support for levels of classes, OR handling (feat A or feat B.) Feature support.
 
 NEXT 3 months ago: Update objects.json for new feature/result retrieval structure, then update generation logic: skills, saves, bab, hp, and incorporate level (math: total bab = math.floor(class_level*bab_type))
 
